@@ -1,0 +1,101 @@
+name: Daily stage scrape
+
+on:
+  schedule:
+    # 19:45 UTC (21:45 CEST) every day of the Tour window, July 4-26 2026 —
+    # comfortably after each stage finishes (~17:30 CEST) and results are
+    # official. Rest days (Jul 13, 20) simply find no new stage and no-op.
+    - cron: "45 19 4-26 7 *"
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: "Stage number to scrape (blank = auto from calendar)"
+        required: false
+
+permissions:
+  contents: write # auto-commit of scraped data
+  actions: write # trigger the Deploy workflow after the data commit
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Determine stage number
+        id: stage
+        run: |
+          if [ -n "${{ github.event.inputs.stage }}" ]; then
+            echo "n=${{ github.event.inputs.stage }}" >> "$GITHUB_OUTPUT"
+          else
+            # Map today's date to a stage number: Jul 4 = stage 1, with rest
+            # days on Jul 13 and Jul 20 (day maps must match src/tokens.js).
+            python - <<'EOF' >> "$GITHUB_OUTPUT"
+          import datetime
+          today = datetime.datetime.now(datetime.UTC).date()
+          start = datetime.date(2026, 7, 4)
+          rest_days = {datetime.date(2026, 7, 13), datetime.date(2026, 7, 20)}
+          if today < start or today in rest_days:
+              print("n=")
+          else:
+              n = (today - start).days + 1 - sum(1 for r in rest_days if r < today)
+              print(f"n={n if 1 <= n <= 21 else ''}")
+          EOF
+          fi
+
+      - name: Scrape stage results
+        if: steps.stage.outputs.n != ''
+        run: python scripts/scrape_letour.py --stage "${{ steps.stage.outputs.n }}"
+
+      - name: Snapshot Tissot public API
+        if: steps.stage.outputs.n != ''
+        continue-on-error: true # nice-to-have; never blocks the results pipeline
+        run: python scripts/scrape_tissot.py
+
+      - name: Compute fantasy points and rebuild dataset
+        if: steps.stage.outputs.n != ''
+        run: |
+          python scripts/compute_points.py
+          python scripts/build_data.py
+
+      - name: Run tests
+        if: steps.stage.outputs.n != ''
+        run: python -m pytest tests/ -q
+
+      - name: Commit and push data
+        if: steps.stage.outputs.n != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ public/data/
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+            echo "pushed=false" >> "$GITHUB_ENV"
+          else
+            git commit -m "Stage ${{ steps.stage.outputs.n }} data ($(date -u +%F))"
+            git pull --rebase origin main
+            git push
+            echo "pushed=true" >> "$GITHUB_ENV"
+          fi
+
+      # Commits made with GITHUB_TOKEN don't trigger other workflows (a
+      # security default), so fire the Pages deploy explicitly.
+      - name: Trigger Deploy workflow
+        if: env.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run "Deploy to GitHub Pages" --ref main --repo "$GITHUB_REPOSITORY"

@@ -1,5 +1,21 @@
-
 # Beads / Dolt files (added by bd init)
 .dolt/
 *.db
 .beads-credential-key
+.beads/embeddeddolt/
+
+# Dependencies / build output
+node_modules/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Excel lock files (source workbook may be open while working)
+~$*.xlsx
+
+# Local environment
+.env
+.env.local

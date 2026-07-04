@@ -53,18 +53,27 @@ bd close <id>         # Complete work
 
 ## Build & Test
 
-_Add your build and test commands here_
-
 ```bash
-# Example:
-# npm install
-# npm test
+npm install && npm run dev        # dashboard at http://localhost:5173
+npm run build                     # production build to dist/
+python -m pytest tests/ -q        # scoring-engine tests
+python scripts/scrape_letour.py --stage N   # scrape one stage
+python scripts/compute_points.py && python scripts/build_data.py
 ```
 
 ## Architecture Overview
 
-_Add a brief overview of your project architecture_
+Static React dashboard (Vite + Tailwind + Recharts) on GitHub Pages, fed by a
+Python scrape → compute → build pipeline committed to the repo. See README.md
+for the full data-flow diagram, letour.fr classification codes, and the Tissot
+scoring model. The dashboard reads exactly one file: `public/data/tdf.json`.
 
 ## Conventions & Patterns
 
-_Add your project-specific conventions here_
+- Design system is ported from the CarsAndBidsData project (CSS-variable
+  theme tokens in `src/index.css`, exported via `src/tokens.js`).
+- Rider join keys are `INITIAL|SURNAME` (see `compute_points.name_key`);
+  unmatched scraped names surface as build_data warnings and are fixed via
+  its `ALIASES` map.
+- `data/raw/` holds real 2026 race data only; the 2025 placeholder scrape
+  lives in `tests/fixtures/` for parser/scoring tests.

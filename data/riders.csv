@@ -1,0 +1,185 @@
+rider_id,display_name,last_name,match_key,cost,category,team
+t-pogacar,T. Pogacar,Pogacar,POGACAR,27,Leaders,UAE Team Emirates XRG
+j-vingegaard-hansen,J. Vingegaard Hansen,Vingegaard Hansen,VINGEGAARD HANSEN,24,Leaders,Team Visma | Lease a Bike
+t-merlier,T. Merlier,Merlier,MERLIER,23,Sprinters,Soudal Quick-Step
+i-del-toro-romero,I. Del Toro Romero,Del Toro Romero,DEL TORO ROMERO,22,Climbers,UAE Team Emirates XRG
+j-philipsen,J. Philipsen,Philipsen,PHILIPSEN,22,Sprinters,Alpecin-Premier Tech
+mr-van-der-poel,MR. Van Der Poel,Van Der Poel,VAN DER POEL,22,All-rounders,Alpecin-Premier Tech
+f-lipowitz,F. Lipowitz,Lipowitz,LIPOWITZ,20,Leaders,Red Bull - BORA -hansgrohe
+r-evenepoel,R. Evenepoel,Evenepoel,EVENEPOEL,20,Leaders,Red Bull - BORA -hansgrohe
+j-ayuso-pesquera,J. Ayuso Pesquera,Ayuso Pesquera,AYUSO PESQUERA,20,Leaders,Lidl-Trek
+p-seixas,P. Seixas,Seixas,SEIXAS,19,Leaders,Decathlon CMA CGM Team
+o-kooij,O. Kooij,Kooij,KOOIJ,19,Sprinters,Decathlon CMA CGM Team
+a-yates,A. Yates,Yates,YATES,19,Leaders,UAE Team Emirates XRG
+b-girmay,B. Girmay,Girmay,GIRMAY,19,Sprinters,NSN Cycling Team
+r-carapaz,R. Carapaz,Carapaz,CARAPAZ,19,Leaders,EF Education - Easypost
+f-ganna,F. Ganna,Ganna,GANNA,18,All-rounders,Netcompany Ineos
+mr-pedersen,Mr. Pedersen,Pedersen,PEDERSEN,18,Sprinters,Lidl-Trek
+mr-jorgenson,Mr. Jorgenson,Jorgenson,JORGENSON,18,Climbers,Team Visma | Lease a Bike
+t-pidcock,T. Pidcock,Pidcock,PIDCOCK,18,Leaders,Pinarello-Q.36.5 Pro Cycling Team
+t-arensman,T. Arensman,Arensman,ARENSMAN,17,Leaders,Netcompany Ineos
+t-johannessen,T. Johannessen,Johannessen,JOHANNESSEN,17,Leaders,Uno-X Mobility
+mr-skjelmosse,Mr. Skjelmosse,Skjelmosse,SKJELMOSSE,17,Climbers,Lidl-Trek
+d-piganzoli,D. Piganzoli,Piganzoli,PIGANZOLI,16,Climbers,Team Visma | Lease a Bike
+c-uijtdebroeks,C. Uijtdebroeks,Uijtdebroeks,UIJTDEBROEKS,16,Leaders,Movistar Team
+m-riccitello,M. Riccitello,Riccitello,RICCITELLO,16,Climbers,Decathlon CMA CGM Team
+d-gee,D. Gee,Gee,GEE,16,Leaders,Lidl-Trek
+a-de-lie,A. De Lie,De Lie,DE LIE,16,Sprinters,Lotto Intermarche
+j-tarling,J. Tarling,Tarling,TARLING,16,All-rounders,Netcompany Ineos
+b-mcnulty,B. Mcnulty,Mcnulty,MCNULTY,16,Climbers,UAE Team Emirates XRG
+s-kuss,S. Kuss,Kuss,KUSS,16,Climbers,Team Visma | Lease a Bike
+e-bernal-gomez,E. Bernal Gomez,Bernal Gomez,BERNAL GOMEZ,16,Leaders,Netcompany Ineos
+m-storer,M. Storer,Storer,STORER,16,Leaders,Tudor Pro Cycling Team
+j-hindley,J. Hindley,Hindley,HINDLEY,16,Climbers,Red Bull - BORA -hansgrohe
+m-mohoric,M. Mohoric,Mohoric,MOHORIC,16,All-rounders,Bahrain Victorious
+b-o-connor,B. O'Connor,O'Connor,O'CONNOR,16,Leaders,Team Jayco AlUla
+a-de-kleijn,A. De Kleijn,De Kleijn,DE KLEIJN,15,Sprinters,Tudor Pro Cycling Team
+a-tiberi,A. Tiberi,Tiberi,TIBERI,15,Leaders,Bahrain Victorious
+k-vauquelin,K. Vauquelin,Vauquelin,VAUQUELIN,15,Leaders,Netcompany Ineos
+t-stewart,T. Stewart,Stewart,STEWART,15,Sprinters,NSN Cycling Team
+p-ackermann,P. Ackermann,Ackermann,ACKERMANN,15,Sprinters,Team Jayco AlUla
+b-healy,B. Healy,Healy,HEALY,15,All-rounders,EF Education - Easypost
+l-martinez,L. Martinez,Martinez,MARTINEZ,15,Climbers,Bahrain Victorious
+mr-matthews,Mr. Matthews,Matthews,MATTHEWS,15,Sprinters,Team Jayco AlUla
+q-simmons,Q. Simmons,Simmons,SIMMONS,15,All-rounders,Lidl-Trek
+j-alaphilippe,J. Alaphilippe,Alaphilippe,ALAPHILIPPE,15,All-rounders,Tudor Pro Cycling Team
+p-bauhaus,P. Bauhaus,Bauhaus,BAUHAUS,15,Sprinters,Bahrain Victorious
+e-affini,E. Affini,Affini,AFFINI,14,All-rounders,Team Visma | Lease a Bike
+v-paret-peintre,V. Paret-Peintre,Paret-Peintre,PARET-PEINTRE,14,Climbers,Soudal Quick-Step
+e-rubio-reyes,E. Rubio Reyes,Rubio Reyes,RUBIO REYES,14,Climbers,Movistar Team
+m-fretin,M. Fretin,Fretin,FRETIN,14,Sprinters,Cofidis
+j-jegat,J. Jegat,Jegat,JEGAT,14,Leaders,TotalEnergies
+f-gaviria-rendon,F. Gaviria Rendon,Gaviria Rendon,GAVIRIA RENDON,14,Sprinters,Caja Rural-Seguros RGA
+r-gregoire,R. Gregoire,Gregoire,GREGOIRE,14,All-rounders,Groupama-FDJ United
+d-godon,D. Godon,Godon,GODON,14,Sprinters,Netcompany Ineos
+m-schmid,M. Schmid,Schmid,SCHMID,14,Climbers,Team Jayco AlUla
+mr-cort-nielsen,Mr. Cort Nielsen,Cort Nielsen,CORT NIELSEN,14,All-rounders,Uno-X Mobility
+m-kanter,M. Kanter,Kanter,KANTER,13,Sprinters,XDS Astana Team
+g-steinhauser,G. Steinhauser,Steinhauser,STEINHAUSER,13,All-rounders,EF Education - Easypost
+s-higuita-garcia,S. Higuita Garcia,Higuita Garcia,HIGUITA GARCIA,13,Climbers,XDS Astana Team
+p-bittner,P. Bittner,Bittner,BITTNER,13,Sprinters,Team Picnic PostNL
+l-plapp,L. Plapp,Plapp,PLAPP,13,All-rounders,Team Jayco AlUla
+j-beckermoes,J. Beckermoes,Beckermoes,BECKERMOES,13,Sprinters,Lotto Intermarche
+t-foss,T. Foss,Foss,FOSS,13,All-rounders,Netcompany Ineos
+l-askey,L. Askey,Askey,ASKEY,13,All-rounders,NSN Cycling Team
+i-van-wilder,I. Van Wilder,Van Wilder,VAN WILDER,13,Climbers,Soudal Quick-Step
+a-aranburu-deva,A. Aranburu Deva,Aranburu Deva,ARANBURU DEVA,13,Sprinters,Cofidis
+g-martin-guyonnet,G. Martin Guyonnet,Martin Guyonnet,MARTIN GUYONNET,13,Leaders,Groupama-FDJ United
+h-tejada-canacue,H. Tejada Canacue,Tejada Canacue,TEJADA CANACUE,13,Climbers,XDS Astana Team
+j-parra-cuerda,J. Parra Cuerda,Parra Cuerda,PARRA CUERDA,12,Leaders,Caja Rural-Seguros RGA
+l-van-eetvelt,L. Van Eetvelt,Van Eetvelt,VAN EETVELT,12,Climbers,Lotto Intermarche
+d-ballerini,D. Ballerini,Ballerini,BALLERINI,12,All-rounders,XDS Astana Team
+m-valgren,M. Valgren,Valgren,VALGREN,12,All-rounders,EF Education - Easypost
+n-prodhomme,N. Prodhomme,Prodhomme,PRODHOMME,12,Climbers,Decathlon CMA CGM Team
+t-wellens,T. Wellens,Wellens,WELLENS,12,All-rounders,UAE Team Emirates XRG
+j-abrahamsen,J. Abrahamsen,Abrahamsen,ABRAHAMSEN,12,All-rounders,Uno-X Mobility
+m-trentin,M. Trentin,Trentin,TRENTIN,12,Sprinters,Tudor Pro Cycling Team
+f-grossschartner,F. Grossschartner,Grossschartner,GROSSSCHARTNER,12,Climbers,UAE Team Emirates XRG
+j-stuyven,J. Stuyven,Stuyven,STUYVEN,12,All-rounders,Soudal Quick-Step
+mr-van-gils,Mr. Van Gils,Van Gils,VAN GILS,12,All-rounders,Red Bull - BORA -hansgrohe
+mr-kwiatkowski,Mr Kwiatkowski,Kwiatkowski,KWIATKOWSKI,12,All-rounders,Netcompany Ineos
+i-izagirre-insausti,I. Izagirre Insausti,Izagirre Insausti,IZAGIRRE INSAUSTI,12,Climbers,Cofidis
+a-wright,A. Wright,Wright,WRIGHT,12,All-rounders,Pinarello-Q.36.5 Pro Cycling Team
+j-cepeda,J. Cepeda,Cepeda,CEPEDA,11,Climbers,Movistar Team
+d-caruso,D. Caruso,Caruso,CARUSO,11,Climbers,Bahrain Victorious
+s-velasco,S. Velasco,Velasco,VELASCO,11,All-rounders,XDS Astana Team
+m-hirschi,M. Hirschi,Hirschi,HIRSCHI,11,All-rounders,Tudor Pro Cycling Team
+m-cattaneo,M. Cattaneo,Cattaneo,CATTANEO,11,All-rounders,Red Bull - BORA -hansgrohe
+p-castrillo-zapater,P. Castrillo Zapater,Castrillo Zapater,CASTRILLO ZAPATER,11,Climbers,Movistar Team
+f-van-den-broek,F. Van Den Broek,Van Den Broek,VAN DEN BROEK,11,All-rounders,Team Picnic PostNL
+h-page,H. Page,Page,PAGE,11,Sprinters,Cofidis
+g-bennett,G. Bennett,Bennett,BENNETT,11,Climbers,NSN Cycling Team
+b-armirail,B. Armirail,Armirail,ARMIRAIL,11,All-rounders,Team Visma | Lease a Bike
+v-campenaerts,V. Campenaerts,Campenaerts,CAMPENAERTS,11,All-rounders,Team Visma | Lease a Bike
+c-berthet,C. Berthet,Berthet,BERTHET,11,Climbers,Groupama-FDJ United
+s-waerenskjold,S. Waerenskjold,Waerenskjold,WAERENSKJOLD,11,All-rounders,Uno-X Mobility
+k-asgreen,K. Asgreen,Asgreen,ASGREEN,11,All-rounders,EF Education - Easypost
+t-benoot,T. Benoot,Benoot,BENOOT,11,All-rounders,Decathlon CMA CGM Team
+k-neilands,K. Neilands,Neilands,NEILANDS,11,All-rounders,NSN Cycling Team
+g-zimmermann,G. Zimmermann,Zimmermann,ZIMMERMANN,11,Climbers,Lotto Intermarche
+c-bol,C. Bol,Bol,BOL,11,Sprinters,Decathlon CMA CGM Team
+q-hermans,Q. Hermans,Hermans,HERMANS,11,All-rounders,Pinarello-Q.36.5 Pro Cycling Team
+a-paret-peintre,A. Paret-Peintre,Paret-Peintre,PARET-PEINTRE,11,All-rounders,Decathlon CMA CGM Team
+a-gate,A. Gate,Gate,GATE,10,Sprinters,XDS Astana Team
+p-gahenes,P. Gahenes,Gahenes,GAHENES,10,Climbers,Team Visma | Lease a Bike
+t-van-dijke,T. Van Dijke,Van Dijke,VAN DIJKE,10,All-rounders,Red Bull - BORA -hansgrohe
+m-vacek,M. Vacek,Vacek,VACEK,10,All-rounders,Lidl-Trek
+a-balderstone-roumens,A. Balderstone Roumens,Balderstone Roumens,BALDERSTONE ROUMENS,10,Leaders,Caja Rural-Seguros RGA
+r-debruyne,R. Debruyne,Debruyne,DEBRUYNE,10,All-rounders,Alpecin-Premier Tech
+d-hoole,D. Hoole,Hoole,HOOLE,10,All-rounders,Decathlon CMA CGM Team
+a-abaudin,A. Abaudin,Abaudin,ABAUDIN,10,Climbers,EF Education - Easypost
+b-thomas,B. Thomas,Thomas,THOMAS,10,All-rounders,Cofidis
+r-stannard,R. Stannard,Stannard,STANNARD,10,All-rounders,Bahrain Victorious
+e-costiou,E. Costiou,Costiou,COSTIOU,10,Climbers,Groupama-FDJ United
+t-guernalec,T. Guernalec,Guernalec,GUERNALEC,10,All-rounders,TotalEnergies
+r-garcia-pierna,R. Garcia Pierna,Garcia Pierna,GARCIA PIERNA,10,All-rounders,Movistar Team
+a-turgis,A. Turgis,Turgis,TURGIS,10,All-rounders,TotalEnergies
+t-traeen,T. Traeen,Traeen,TRAEEN,10,Climbers,Uno-X Mobility
+c-harper,C. Harper,Harper,HARPER,10,Climbers,Pinarello-Q.36.5 Pro Cycling Team
+j-degenkolb,J. Degenkolb,Degenkolb,DEGENKOLB,10,Sprinters,Team Picnic PostNL
+w-barguil,W. Barguil,Barguil,BARGUIL,10,Climbers,Team Picnic PostNL
+f-vermeersch,F. Vermeersch,Vermeersch,VERMEERSCH,10,All-rounders,UAE Team Emirates XRG
+d-van-baarle,D. Van Baarle,Van Baarle,VAN BAARLE,10,All-rounders,Soudal Quick-Step
+q-pacher,Q. Pacher,Pacher,PACHER,10,All-rounders,Groupama-FDJ United
+n-politt,N. Politt,Politt,POLITT,10,All-rounders,UAE Team Emirates XRG
+y-voisard,Y. Voisard,Voisard,VOISARD,9,Climbers,Tudor Pro Cycling Team
+r-pluimers,R. Pluimers,Pluimers,PLUIMERS,9,All-rounders,Tudor Pro Cycling Team
+f-biesterbos,F. Biesterbos,Biesterbos,BIESTERBOS,9,All-rounders,Team Picnic PostNL
+f-engelhardt,F. Engelhardt,Engelhardt,ENGELHARDT,9,All-rounders,Team Jayco AlUla
+t-van-asbroeck,T. Van Asbroeck,Van Asbroeck,VAN ASBROECK,9,All-rounders,NSN Cycling Team
+l-slock,L. Slock,Slock,SLOCK,9,All-rounders,Lotto Intermarche
+b-veistroffer,B. Veistroffer,Veistroffer,VEISTROFFER,9,All-rounders,Lotto Intermarche
+a-delettre,A. Delettre,Delettre,DELETTRE,9,All-rounders,TotalEnergies
+m-le-berre,M. Le Berre,Le Berre,LE BERRE,9,All-rounders,TotalEnergies
+e-verstrynge,E. Verstrynge,Verstrynge,VERSTRYNGE,9,All-rounders,Alpecin-Premier Tech
+m-vercher,M. Vercher,Vercher,VERCHER,9,All-rounders,TotalEnergies
+b-van-moer,B. Van Moer,Van Moer,VAN MOER,9,All-rounders,Pinarello-Q.36.5 Pro Cycling Team
+s-quinn,S. Quinn,Quinn,QUINN,9,All-rounders,EF Education - Easypost
+x-meurisse,X. Meurisse,Meurisse,MEURISSE,9,Climbers,Pinarello-Q.36.5 Pro Cycling Team
+c-russo,C. Russo,Russo,RUSSO,9,All-rounders,Groupama-FDJ United
+t-skujins,T. Skujins,Skujins,SKUJINS,9,All-rounders,Lidl-Trek
+m-teunissen,M. Teunissen,Teunissen,TEUNISSEN,9,All-rounders,XDS Astana Team
+n-vinokurov,N Vinokurov,Vinokurov,VINOKUROV,8,All-rounders,XDS Astana Team
+j-delbove,J. Delbove,Delbove,DELBOVE,8,All-rounders,TotalEnergies
+d-howson,D. Howson,Howson,HOWSON,8,Climbers,Pinarello-Q.36.5 Pro Cycling Team
+m-frigo,M. Frigo,Frigo,FRIGO,8,Climbers,NSN Cycling Team
+m-hessmann,M. Hessmann,Hessmann,HESSMANN,8,All-rounders,Movistar Team
+l-craps,L. Craps,Craps,CRAPS,8,All-rounders,Lotto Intermarche
+h-artz,H. Artz,Artz,ARTZ,8,All-rounders,Lotto Intermarche
+l-germani,L. Germani,Germani,GERMANI,8,All-rounders,Groupama-FDJ United
+j-otruba,J. Otruba,Otruba,OTRUBA,8,All-rounders,Caja Rural-Seguros RGA
+s-berwick,S. Berwick,Berwick,BERWICK,8,Climbers,Caja Rural-Seguros RGA
+v-van-mechelen,V. Van Mechelen,Van Mechelen,VAN MECHELEN,8,All-rounders,Bahrain Victorious
+e-planckaert,E. Planckaert,Planckaert,PLANCKAERT,8,All-rounders,Alpecin-Premier Tech
+c-braz-afonso,C. Braz Afonso,Braz Afonso,BRAZ AFONSO,8,Climbers,Groupama-FDJ United
+a-skaarseth,A. Skaarseth,Skaarseth,SKAARSETH,8,All-rounders,Uno-X Mobility
+s-oldani,S. Oldani,Oldani,OLDANI,8,Sprinters,Caja Rural-Seguros RGA
+j-tratnik,J. Tratnik,Tratnik,TRATNIK,8,All-rounders,Red Bull - BORA -hansgrohe
+m-haller,M. Haller,Haller,HALLER,8,All-rounders,Tudor Pro Cycling Team
+a-charmig,A. Charmig,Charmig,CHARMIG,8,Climbers,Uno-X Mobility
+n-oliveira,N. Oliveira,Oliveira,OLIVEIRA,8,All-rounders,Movistar Team
+p-eenkhoorn,P. Eenkhoorn,Eenkhoorn,EENKHOORN,8,All-rounders,Soudal Quick-Step
+j-rickaert,J. Rickaert,Rickaert,RICKAERT,8,All-rounders,Alpecin-Premier Tech
+s-dillier,S. Dillier,Dillier,DILLIER,8,All-rounders,Alpecin-Premier Tech
+n-breullard,N. Breullard,Breullard,BREULLARD,7,Climbers,TotalEnergies
+x-azparren-irurzun,X. Azparren Irurzun,Azparren Irurzun,AZPARREN IRURZUN,7,All-rounders,Pinarello-Q.36.5 Pro Cycling Team
+j-romo-oliver,J. Romo Oliver,Romo Oliver,ROMO OLIVER,7,All-rounders,Movistar Team
+n-denz,N. Denz,Denz,DENZ,7,All-rounders,Red Bull - BORA -hansgrohe
+l-vervaeke,L. Vervaeke,Vervaeke,VERVAEKE,7,Climbers,Soudal Quick-Step
+l-durbridge,L. Durbridge,Durbridge,DURBRIDGE,7,All-rounders,Team Jayco AlUla
+m-louvel,M. Louvel,Louvel,LOUVEL,7,All-rounders,NSN Cycling Team
+j-biermans,J. Biermans,Biermans,BIERMANS,7,All-rounders,Cofidis
+mr-walker,Mr. Walker,Walker,WALKER,6,All-rounders,EF Education - Easypost
+j-nicolau-beltran,J. Nicolau Beltran,Nicolau Beltran,NICOLAU BELTRAN,6,Climbers,Caja Rural-Seguros RGA
+a-johannessen,A. Johannessen,Johannessen,JOHANNESSEN,6,All-rounders,Uno-X Mobility
+n-markl,N. Markl,Markl,MARKL,6,All-rounders,Team Picnic PostNL
+b-ban-lerberghe,B. Ban Lerberghe,Ban Lerberghe,BAN LERBERGHE,6,All-rounders,Soudal Quick-Step
+j-van-den-berg,J. Van Den Berg,Van Den Berg,VAN DEN BERG,6,All-rounders,Team Picnic PostNL
+c-verona-quintanilla,C. Verona Quintanilla,Verona Quintanilla,VERONA QUINTANILLA,6,All-rounders,Lidl-Trek
+a-kirsch,A. Kirsch,Kirsch,KIRSCH,6,All-rounders,Cofidis
+p-allegaert,P. Allegaert,Allegaert,ALLEGAERT,6,All-rounders,Cofidis
+t-marsman,T. Marsman,Marsman,MARSMAN,5,All-rounders,Alpecin-Premier Tech
+r-dhondt,R. Dhondt,Dhondt,DHONDT,5,All-rounders,Team Picnic PostNL
+k-o-brien,K. O'Brien,O'Brien,O'BRIEN,5,All-rounders,Team Jayco AlUla
+a-molenaar,A. Molenaar,Molenaar,MOLENAAR,5,All-rounders,Caja Rural-Seguros RGA
+k-gradek,K. Gradek,Gradek,GRADEK,5,All-rounders,Bahrain Victorious

@@ -1,0 +1,26 @@
+{
+ "stage": 1,
+ "code": "ime",
+ "scraped_at": "2026-07-04T05:12:13.048803+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/1/ime/e479adcac22d9a1db8669b7a5c969b19/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "B. THOMAS",
+   "Rider No.": "167",
+   "Team": "COFIDIS",
+   "Points": "1 PT",
+   "rank": 1,
+   "name": "B. THOMAS",
+   "team": "COFIDIS",
+   "bib": "167"
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "stage": 1,
+ "code": "ice",
+ "scraped_at": "2026-07-04T05:12:09.500227+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/1/ice/904ce69ffb8545685f228eadc4d0ae49/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "M. VERCHER",
+   "Rider No.": "188",
+   "Team": "TOTALENERGIES",
+   "rank": 1,
+   "name": "M. VERCHER",
+   "team": "TOTALENERGIES",
+   "bib": "188"
+  }
+ ]
+}
