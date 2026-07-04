@@ -1,0 +1,76 @@
+{
+ "stage": 1,
+ "code": "ipg",
+ "scraped_at": "2026-07-04T20:35:24.704029+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/1/ipg/6306411cc2a1d71e4fe456b8c4901833/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points",
+  "P"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "E. BERNAL",
+   "Rider No.": "81",
+   "Team": "NETCOMPANY INEOS CYCLING TEAM",
+   "Points": "0 PT",
+   "P": "-",
+   "rank": 1,
+   "name": "E. BERNAL",
+   "team": "NETCOMPANY INEOS CYCLING TEAM",
+   "bib": "81"
+  },
+  {
+   "Rank": "2",
+   "Rider": "K. VAUQUELIN",
+   "Rider No.": "88",
+   "Team": "NETCOMPANY INEOS CYCLING TEAM",
+   "Points": "0 PT",
+   "P": "-",
+   "rank": 2,
+   "name": "K. VAUQUELIN",
+   "team": "NETCOMPANY INEOS CYCLING TEAM",
+   "bib": "88"
+  },
+  {
+   "Rank": "3",
+   "Rider": "M. KWIATKOWSKI",
+   "Rider No.": "86",
+   "Team": "NETCOMPANY INEOS CYCLING TEAM",
+   "Points": "0 PT",
+   "P": "-",
+   "rank": 3,
+   "name": "M. KWIATKOWSKI",
+   "team": "NETCOMPANY INEOS CYCLING TEAM",
+   "bib": "86"
+  },
+  {
+   "Rank": "4",
+   "Rider": "D. GODON",
+   "Rider No.": "85",
+   "Team": "NETCOMPANY INEOS CYCLING TEAM",
+   "Points": "0 PT",
+   "P": "-",
+   "rank": 4,
+   "name": "D. GODON",
+   "team": "NETCOMPANY INEOS CYCLING TEAM",
+   "bib": "85"
+  },
+  {
+   "Rank": "5",
+   "Rider": "T. ARENSMAN",
+   "Rider No.": "82",
+   "Team": "NETCOMPANY INEOS CYCLING TEAM",
+   "Points": "0 PT",
+   "P": "-",
+   "rank": 5,
+   "name": "T. ARENSMAN",
+   "team": "NETCOMPANY INEOS CYCLING TEAM",
+   "bib": "82"
+  }
+ ]
+}

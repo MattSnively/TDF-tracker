@@ -1,4 +1,1432 @@
 {
- "stages": [],
- "riders": {}
+ "stages": [
+  1
+ ],
+ "riders": {
+  "J|VINGEGAARD": {
+   "display": "J. VINGEGAARD",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 76
+   },
+   "detail": {
+    "1": {
+     "gc": 50,
+     "kom": 26
+    }
+   }
+  },
+  "F|GANNA": {
+   "display": "F. GANNA",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 65
+   },
+   "detail": {
+    "1": {
+     "gc": 45,
+     "kom": 20
+    }
+   }
+  },
+  "T|POGACAR": {
+   "display": "T. POGACAR",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 70
+   },
+   "detail": {
+    "1": {
+     "gc": 40,
+     "kom": 30
+    }
+   }
+  },
+  "J|AYUSO": {
+   "display": "J. AYUSO",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 55
+   },
+   "detail": {
+    "1": {
+     "gc": 35,
+     "youth": 20
+    }
+   }
+  },
+  "R|EVENEPOEL": {
+   "display": "R. EVENEPOEL",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 52
+   },
+   "detail": {
+    "1": {
+     "gc": 30,
+     "kom": 22
+    }
+   }
+  },
+  "I|DEL TORO": {
+   "display": "I. DEL TORO",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 46
+   },
+   "detail": {
+    "1": {
+     "gc": 28,
+     "youth": 18
+    }
+   }
+  },
+  "D|PIGANZOLI": {
+   "display": "D. PIGANZOLI",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 42
+   },
+   "detail": {
+    "1": {
+     "gc": 26,
+     "youth": 16
+    }
+   }
+  },
+  "F|LIPOWITZ": {
+   "display": "F. LIPOWITZ",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 24
+   },
+   "detail": {
+    "1": {
+     "gc": 24
+    }
+   }
+  },
+  "T|FOSS": {
+   "display": "T. FOSS",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 22
+   },
+   "detail": {
+    "1": {
+     "gc": 22
+    }
+   }
+  },
+  "P|SEIXAS": {
+   "display": "P. SEIXAS",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 35
+   },
+   "detail": {
+    "1": {
+     "gc": 21,
+     "youth": 14
+    }
+   }
+  },
+  "M|VAN DER POEL": {
+   "display": "M. VAN DER POEL",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 20
+   },
+   "detail": {
+    "1": {
+     "gc": 20
+    }
+   }
+  },
+  "R|GREGOIRE": {
+   "display": "R. GREGOIRE",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 49
+   },
+   "detail": {
+    "1": {
+     "gc": 19,
+     "kom": 18,
+     "youth": 12
+    }
+   }
+  },
+  "A|TIBERI": {
+   "display": "A. TIBERI",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 28
+   },
+   "detail": {
+    "1": {
+     "gc": 18,
+     "youth": 10
+    }
+   }
+  },
+  "M|RICCITELLO": {
+   "display": "M. RICCITELLO",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 26
+   },
+   "detail": {
+    "1": {
+     "gc": 17,
+     "youth": 9
+    }
+   }
+  },
+  "L|MARTINEZ": {
+   "display": "L. MARTINEZ",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 24
+   },
+   "detail": {
+    "1": {
+     "gc": 16,
+     "youth": 8
+    }
+   }
+  },
+  "M|MATTHEWS": {
+   "display": "M. MATTHEWS",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 15
+   },
+   "detail": {
+    "1": {
+     "gc": 15
+    }
+   }
+  },
+  "A|BAUDIN": {
+   "display": "A. BAUDIN",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 21
+   },
+   "detail": {
+    "1": {
+     "gc": 14,
+     "youth": 7
+    }
+   }
+  },
+  "T|PIDCOCK": {
+   "display": "T. PIDCOCK",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 13
+   },
+   "detail": {
+    "1": {
+     "gc": 13
+    }
+   }
+  },
+  "I|VAN WILDER": {
+   "display": "I. VAN WILDER",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 12
+   },
+   "detail": {
+    "1": {
+     "gc": 12
+    }
+   }
+  },
+  "T|JOHANNESSEN": {
+   "display": "T. JOHANNESSEN",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 11
+   },
+   "detail": {
+    "1": {
+     "gc": 11
+    }
+   }
+  },
+  "T|ARENSMAN": {
+   "display": "T. ARENSMAN",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 28
+   },
+   "detail": {
+    "1": {
+     "gc": 10,
+     "points": 18
+    }
+   }
+  },
+  "J|JEGAT": {
+   "display": "J. JEGAT",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 10
+   },
+   "detail": {
+    "1": {
+     "gc": 10
+    }
+   }
+  },
+  "M|VACEK": {
+   "display": "M. VACEK",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 16
+   },
+   "detail": {
+    "1": {
+     "gc": 10,
+     "youth": 6
+    }
+   }
+  },
+  "A|MOLENAAR": {
+   "display": "A. MOLENAAR",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 10
+   },
+   "detail": {
+    "1": {
+     "gc": 10
+    }
+   }
+  },
+  "Y|VOISARD": {
+   "display": "Y. VOISARD",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 10
+   },
+   "detail": {
+    "1": {
+     "gc": 10
+    }
+   }
+  },
+  "K|VAUQUELIN": {
+   "display": "K. VAUQUELIN",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 40
+   },
+   "detail": {
+    "1": {
+     "gc": 9,
+     "points": 26,
+     "youth": 5
+    }
+   }
+  },
+  "G|BENNETT": {
+   "display": "G. BENNETT",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 9
+   },
+   "detail": {
+    "1": {
+     "gc": 9
+    }
+   }
+  },
+  "I|IZAGIRRE": {
+   "display": "I. IZAGIRRE",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 9
+   },
+   "detail": {
+    "1": {
+     "gc": 9
+    }
+   }
+  },
+  "R|GARCIA": {
+   "display": "R. GARCIA",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 13
+   },
+   "detail": {
+    "1": {
+     "gc": 9,
+     "youth": 4
+    }
+   }
+  },
+  "J|ALAPHILIPPE": {
+   "display": "J. ALAPHILIPPE",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 9
+   },
+   "detail": {
+    "1": {
+     "gc": 9
+    }
+   }
+  },
+  "T|TRÆEN": {
+   "display": "T. TRÆEN",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 8
+   },
+   "detail": {
+    "1": {
+     "gc": 8
+    }
+   }
+  },
+  "G|STEINHAUSER": {
+   "display": "G. STEINHAUSER",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 11
+   },
+   "detail": {
+    "1": {
+     "gc": 8,
+     "youth": 3
+    }
+   }
+  },
+  "M|SKJELMOSE": {
+   "display": "M. SKJELMOSE",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 8
+   },
+   "detail": {
+    "1": {
+     "gc": 8
+    }
+   }
+  },
+  "L|VAN EETVELT": {
+   "display": "L. VAN EETVELT",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 10
+   },
+   "detail": {
+    "1": {
+     "gc": 8,
+     "youth": 2
+    }
+   }
+  },
+  "R|CARAPAZ": {
+   "display": "R. CARAPAZ",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 8
+   },
+   "detail": {
+    "1": {
+     "gc": 8
+    }
+   }
+  },
+  "J|PARRA": {
+   "display": "J. PARRA",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 7
+   },
+   "detail": {
+    "1": {
+     "gc": 7
+    }
+   }
+  },
+  "P|CASTRILLO": {
+   "display": "P. CASTRILLO",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 8
+   },
+   "detail": {
+    "1": {
+     "gc": 7,
+     "youth": 1
+    }
+   }
+  },
+  "J|CEPEDA": {
+   "display": "J. CEPEDA",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 7
+   },
+   "detail": {
+    "1": {
+     "gc": 7
+    }
+   }
+  },
+  "A|BALDERSTONE": {
+   "display": "A. BALDERSTONE",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 7
+   },
+   "detail": {
+    "1": {
+     "gc": 7
+    }
+   }
+  },
+  "C|UIJTDEBROEKS": {
+   "display": "C. UIJTDEBROEKS",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 7
+   },
+   "detail": {
+    "1": {
+     "gc": 7
+    }
+   }
+  },
+  "R|DHONDT": {
+   "display": "R. DHONDT",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 6
+   },
+   "detail": {
+    "1": {
+     "gc": 6
+    }
+   }
+  },
+  "L|PLAPP": {
+   "display": "L. PLAPP",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 6
+   },
+   "detail": {
+    "1": {
+     "gc": 6
+    }
+   }
+  },
+  "S|KUSS": {
+   "display": "S. KUSS",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 6
+   },
+   "detail": {
+    "1": {
+     "gc": 6
+    }
+   }
+  },
+  "A|PARET PEINTRE": {
+   "display": "A. PARET PEINTRE",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 6
+   },
+   "detail": {
+    "1": {
+     "gc": 6
+    }
+   }
+  },
+  "D|GEE": {
+   "display": "D. GEE",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 6
+   },
+   "detail": {
+    "1": {
+     "gc": 6
+    }
+   }
+  },
+  "M|VAN GILS": {
+   "display": "M. VAN GILS",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 5
+   },
+   "detail": {
+    "1": {
+     "gc": 5
+    }
+   }
+  },
+  "D|VAN BAARLE": {
+   "display": "D. VAN BAARLE",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 5
+   },
+   "detail": {
+    "1": {
+     "gc": 5
+    }
+   }
+  },
+  "M|LE BERRE": {
+   "display": "M. LE BERRE",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 5
+   },
+   "detail": {
+    "1": {
+     "gc": 5
+    }
+   }
+  },
+  "S|QUINN": {
+   "display": "S. QUINN",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 5
+   },
+   "detail": {
+    "1": {
+     "gc": 5
+    }
+   }
+  },
+  "D|GODON": {
+   "display": "D. GODON",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 25
+   },
+   "detail": {
+    "1": {
+     "gc": 5,
+     "points": 20
+    }
+   }
+  },
+  "J|BERCKMOES": {
+   "display": "J. BERCKMOES",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 4
+   },
+   "detail": {
+    "1": {
+     "gc": 4
+    }
+   }
+  },
+  "E|VERSTRYNGE": {
+   "display": "E. VERSTRYNGE",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 4
+   },
+   "detail": {
+    "1": {
+     "gc": 4
+    }
+   }
+  },
+  "J|TARLING": {
+   "display": "J. TARLING",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 4
+   },
+   "detail": {
+    "1": {
+     "gc": 4
+    }
+   }
+  },
+  "S|HIGUITA": {
+   "display": "S. HIGUITA",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 4
+   },
+   "detail": {
+    "1": {
+     "gc": 4
+    }
+   }
+  },
+  "J|HINDLEY": {
+   "display": "J. HINDLEY",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 4
+   },
+   "detail": {
+    "1": {
+     "gc": 4
+    }
+   }
+  },
+  "M|HIRSCHI": {
+   "display": "M. HIRSCHI",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 4
+   },
+   "detail": {
+    "1": {
+     "gc": 4
+    }
+   }
+  },
+  "B|MCNULTY": {
+   "display": "B. MCNULTY",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 4
+   },
+   "detail": {
+    "1": {
+     "gc": 4
+    }
+   }
+  },
+  "C|BRAZ AFONSO": {
+   "display": "C. BRAZ AFONSO",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 4
+   },
+   "detail": {
+    "1": {
+     "gc": 4
+    }
+   }
+  },
+  "M|JORGENSON": {
+   "display": "M. JORGENSON",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 4
+   },
+   "detail": {
+    "1": {
+     "gc": 4
+    }
+   }
+  },
+  "F|VAN DEN BROEK": {
+   "display": "F. VAN DEN BROEK",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 4
+   },
+   "detail": {
+    "1": {
+     "gc": 4
+    }
+   }
+  },
+  "M|HESSMANN": {
+   "display": "M. HEßMANN",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 3
+   },
+   "detail": {
+    "1": {
+     "gc": 3
+    }
+   }
+  },
+  "N|OLIVEIRA": {
+   "display": "N. OLIVEIRA",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 3
+   },
+   "detail": {
+    "1": {
+     "gc": 3
+    }
+   }
+  },
+  "M|VERCHER": {
+   "display": "M. VERCHER",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 3
+   },
+   "detail": {
+    "1": {
+     "gc": 3
+    }
+   }
+  },
+  "N|BREUILLARD": {
+   "display": "N. BREUILLARD",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 3
+   },
+   "detail": {
+    "1": {
+     "gc": 3
+    }
+   }
+  },
+  "A|KIRSCH": {
+   "display": "A. KIRSCH",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 3
+   },
+   "detail": {
+    "1": {
+     "gc": 3
+    }
+   }
+  },
+  "R|DEBRUYNE": {
+   "display": "R. DEBRUYNE",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 3
+   },
+   "detail": {
+    "1": {
+     "gc": 3
+    }
+   }
+  },
+  "Q|HERMANS": {
+   "display": "Q. HERMANS",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 3
+   },
+   "detail": {
+    "1": {
+     "gc": 3
+    }
+   }
+  },
+  "H|TEJADA": {
+   "display": "H. TEJADA",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 3
+   },
+   "detail": {
+    "1": {
+     "gc": 3
+    }
+   }
+  },
+  "J|STUYVEN": {
+   "display": "J. STUYVEN",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 3
+   },
+   "detail": {
+    "1": {
+     "gc": 3
+    }
+   }
+  },
+  "V|PARET PEINTRE": {
+   "display": "V. PARET PEINTRE",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 3
+   },
+   "detail": {
+    "1": {
+     "gc": 3
+    }
+   }
+  },
+  "J|ROMO": {
+   "display": "J. ROMO",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 2
+   },
+   "detail": {
+    "1": {
+     "gc": 2
+    }
+   }
+  },
+  "F|GROSSSCHARTNER": {
+   "display": "F. GROSSSCHARTNER",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 2
+   },
+   "detail": {
+    "1": {
+     "gc": 2
+    }
+   }
+  },
+  "M|KWIATKOWSKI": {
+   "display": "M. KWIATKOWSKI",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 24
+   },
+   "detail": {
+    "1": {
+     "gc": 2,
+     "points": 22
+    }
+   }
+  },
+  "T|WELLENS": {
+   "display": "T. WELLENS",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 2
+   },
+   "detail": {
+    "1": {
+     "gc": 2
+    }
+   }
+  },
+  "F|BIESTERBOS": {
+   "display": "F. BIESTERBOS",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 2
+   },
+   "detail": {
+    "1": {
+     "gc": 2
+    }
+   }
+  },
+  "P|BITTNER": {
+   "display": "P. BITTNER",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 2
+   },
+   "detail": {
+    "1": {
+     "gc": 2
+    }
+   }
+  },
+  "W|BARGUIL": {
+   "display": "W. BARGUIL",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 2
+   },
+   "detail": {
+    "1": {
+     "gc": 2
+    }
+   }
+  },
+  "J|DEGENKOLB": {
+   "display": "J. DEGENKOLB",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 2
+   },
+   "detail": {
+    "1": {
+     "gc": 2
+    }
+   }
+  },
+  "J|VAN DEN BERG": {
+   "display": "J. VAN DEN BERG",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 2
+   },
+   "detail": {
+    "1": {
+     "gc": 2
+    }
+   }
+  },
+  "E|BERNAL": {
+   "display": "E. BERNAL",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 32
+   },
+   "detail": {
+    "1": {
+     "gc": 2,
+     "points": 30
+    }
+   }
+  },
+  "B|GIRMAY": {
+   "display": "B. GIRMAY",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "T|MARSMAN": {
+   "display": "T. MARSMAN",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "M|KANTER": {
+   "display": "M. KANTER",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "B|HEALY": {
+   "display": "B. HEALY",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "K|ASGREEN": {
+   "display": "K. ASGREEN",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "D|CARUSO": {
+   "display": "D. CARUSO",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "A|CHARMIG": {
+   "display": "A. CHARMIG",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "V|VAN MECHELEN": {
+   "display": "V. VAN MECHELEN",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "M|FRIGO": {
+   "display": "M. FRIGO",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "K|NEILANDS": {
+   "display": "K. NEILANDS",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "T|VAN ASBROECK": {
+   "display": "T. VAN ASBROECK",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "L|ASKEY": {
+   "display": "L. ASKEY",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "B|THOMAS": {
+   "display": "B. THOMAS",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "C|RUSSO": {
+   "display": "C. RUSSO",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "L|GERMANI": {
+   "display": "L. GERMANI",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "E|COSTIOU": {
+   "display": "E. COSTIOU",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "N|MÄRKL": {
+   "display": "N. MÄRKL",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "Q|PACHER": {
+   "display": "Q. PACHER",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "T|BENOOT": {
+   "display": "T. BENOOT",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  },
+  "D|HOWSON": {
+   "display": "D. HOWSON",
+   "stage": {
+    "1": 0
+   },
+   "bonus": {
+    "1": 1
+   },
+   "detail": {
+    "1": {
+     "gc": 1
+    }
+   }
+  }
+ }
 }

@@ -1,0 +1,165 @@
+{
+ "clubs": [
+  {
+   "id_club": "2",
+   "club": "apt",
+   "image": "letour26_apt_v2",
+   "label": "Alpecin-Premier Tech",
+   "imageclub": "m_letour26_apt_v2.png?v=13"
+  },
+  {
+   "id_club": "17",
+   "club": "tbv",
+   "image": "letour26_tbv_v2",
+   "label": "Bahrain Victorious",
+   "imageclub": "m_letour26_tbv_v2.png?v=13"
+  },
+  {
+   "id_club": "25",
+   "club": "cjr",
+   "image": "letour26_cjr_v2",
+   "label": "Caja Rural-Seguros RGA",
+   "imageclub": "m_letour26_cjr_v2.png?v=13"
+  },
+  {
+   "id_club": "6",
+   "club": "cof",
+   "image": "letour26_cof_v2",
+   "label": "Cofidis",
+   "imageclub": "m_letour26_cof_v2.png?v=13"
+  },
+  {
+   "id_club": "1",
+   "club": "dct",
+   "image": "letour26_dct_v2",
+   "label": "Decathlon CMA CGM Team",
+   "imageclub": "m_letour26_dct_v2.png?v=13"
+  },
+  {
+   "id_club": "8",
+   "club": "efe",
+   "image": "letour26_efe_v2",
+   "label": "EF Education - Easypost",
+   "imageclub": "m_letour26_efe_v2.png?v=13"
+  },
+  {
+   "id_club": "9",
+   "club": "gfc",
+   "image": "letour26_gfc_v2",
+   "label": "Groupama-FDJ United",
+   "imageclub": "m_letour26_gfc_v2.png?v=13"
+  },
+  {
+   "id_club": "19",
+   "club": "ltk",
+   "image": "letour26_ltk_v2",
+   "label": "Lidl-Trek",
+   "imageclub": "m_letour26_ltk_v2.png?v=13"
+  },
+  {
+   "id_club": "14",
+   "club": "loi",
+   "image": "letour26_loi_v2",
+   "label": "Lotto Intermarché",
+   "imageclub": "m_letour26_loi_v2.png?v=13"
+  },
+  {
+   "id_club": "15",
+   "club": "mov",
+   "image": "letour26_mov_v2",
+   "label": "Movistar Team",
+   "imageclub": "m_letour26_mov_v2.png?v=13"
+  },
+  {
+   "id_club": "12",
+   "club": "nsn",
+   "image": "letour26_nsn_v2",
+   "label": "NSN Cycling Team",
+   "imageclub": "m_letour26_nsn_v2.png?v=13"
+  },
+  {
+   "id_club": "11",
+   "club": "nci",
+   "image": "letour26_nci_v2",
+   "label": "Netcompany Ineos",
+   "imageclub": "m_letour26_nci_v2.png?v=13"
+  },
+  {
+   "id_club": "24",
+   "club": "pqt",
+   "image": "letour26_pqt_v2",
+   "label": "Pinarello-Q.36.5 Pro Cycling Team",
+   "imageclub": "m_letour26_pqt_v2.png?v=13"
+  },
+  {
+   "id_club": "5",
+   "club": "rbh",
+   "image": "letour26_rbh_v2",
+   "label": "Red Bull - BORA - hansgrohe",
+   "imageclub": "m_letour26_rbh_v2.png?v=13"
+  },
+  {
+   "id_club": "16",
+   "club": "soq",
+   "image": "letour26_soq_v2",
+   "label": "Soudal Quick-Step",
+   "imageclub": "m_letour26_soq_v2.png?v=13"
+  },
+  {
+   "id_club": "13",
+   "club": "jay",
+   "image": "letour26_jay_v2",
+   "label": "Team Jayco AlUla",
+   "imageclub": "m_letour26_jay_v2.png?v=13"
+  },
+  {
+   "id_club": "7",
+   "club": "tpp",
+   "image": "letour26_tpp_v1",
+   "label": "Team Picnic PostNL",
+   "imageclub": "m_letour26_tpp_v1.png?v=13"
+  },
+  {
+   "id_club": "20",
+   "club": "tvl",
+   "image": "letour26_tvl_v2",
+   "label": "Team Visma | Lease a Bike",
+   "imageclub": "m_letour26_tvl_v2.png?v=13"
+  },
+  {
+   "id_club": "18",
+   "club": "ten",
+   "image": "letour26_ten_v2",
+   "label": "TotalEnergies",
+   "imageclub": "m_letour26_ten_v2.png?v=13"
+  },
+  {
+   "id_club": "23",
+   "club": "tud",
+   "image": "letour26_tud_v2",
+   "label": "Tudor Pro Cycling Team",
+   "imageclub": "m_letour26_tud_v2.png?v=13"
+  },
+  {
+   "id_club": "21",
+   "club": "uex",
+   "image": "letour26_uex_v2",
+   "label": "UAE Team Emirates XRG",
+   "imageclub": "m_letour26_uex_v2.png?v=13"
+  },
+  {
+   "id_club": "22",
+   "club": "uxm",
+   "image": "letour26_uxm_v2",
+   "label": "Uno-X Mobility",
+   "imageclub": "m_letour26_uxm_v2.png?v=13"
+  },
+  {
+   "id_club": "4",
+   "club": "xat",
+   "image": "letour26_xat_v2",
+   "label": "XDS Astana Team",
+   "imageclub": "m_letour26_xat_v2.png?v=13"
+  }
+ ]
+}

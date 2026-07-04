@@ -1,0 +1,76 @@
+{
+ "stage": 1,
+ "code": "img",
+ "scraped_at": "2026-07-04T20:35:24.625588+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/1/img/a573376eba3b91559f263ac01f200f20/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points",
+  "P"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "T. POGACAR",
+   "Rider No.": "1",
+   "Team": "UAE TEAM EMIRATES XRG",
+   "Points": "0 PT",
+   "P": "-",
+   "rank": 1,
+   "name": "T. POGACAR",
+   "team": "UAE TEAM EMIRATES XRG",
+   "bib": "1"
+  },
+  {
+   "Rank": "2",
+   "Rider": "J. VINGEGAARD",
+   "Rider No.": "11",
+   "Team": "TEAM VISMA | LEASE A BIKE",
+   "Points": "0 PT",
+   "P": "-",
+   "rank": 2,
+   "name": "J. VINGEGAARD",
+   "team": "TEAM VISMA | LEASE A BIKE",
+   "bib": "11"
+  },
+  {
+   "Rank": "3",
+   "Rider": "R. EVENEPOEL",
+   "Rider No.": "21",
+   "Team": "RED BULL - BORA - HANSGROHE",
+   "Points": "0 PT",
+   "P": "-",
+   "rank": 3,
+   "name": "R. EVENEPOEL",
+   "team": "RED BULL - BORA - HANSGROHE",
+   "bib": "21"
+  },
+  {
+   "Rank": "4",
+   "Rider": "F. GANNA",
+   "Rider No.": "84",
+   "Team": "NETCOMPANY INEOS CYCLING TEAM",
+   "Points": "0 PT",
+   "P": "-",
+   "rank": 4,
+   "name": "F. GANNA",
+   "team": "NETCOMPANY INEOS CYCLING TEAM",
+   "bib": "84"
+  },
+  {
+   "Rank": "5",
+   "Rider": "R. GREGOIRE",
+   "Rider No.": "181",
+   "Team": "GROUPAMA-FDJ UNITED",
+   "Points": "0 PT",
+   "P": "-",
+   "rank": 5,
+   "name": "R. GREGOIRE",
+   "team": "GROUPAMA-FDJ UNITED",
+   "bib": "181"
+  }
+ ]
+}
