@@ -100,8 +100,7 @@ repo settings).
 
 ## Notes
 
-- `STAR_BUDGET` in `src/tokens.js` is 100 (the platform standard); the rules
-  text doesn't state the number — verify against the live game.
+- `STAR_BUDGET` in `src/tokens.js` is 120 (confirmed against the live game).
 - The general-classification pages only show the *latest* standings, so the
   nightly scrape is also the historical record: a missed night should be
   re-run with `--no-general` for the stage tables, and the evening GC snapshot

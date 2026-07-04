@@ -58,9 +58,8 @@ export const SERIES_COLORS = [
 
 /* ── Fantasy game constants (from the published Tissot rules) ── */
 export const TEAM_SIZE = 8;
-// NOTE: the rules text says "a fixed star budget" without stating the number;
-// 100 is the platform's standard. Verify against the live game and adjust.
-export const STAR_BUDGET = 100;
+// Confirmed against the live game: 120 stars.
+export const STAR_BUDGET = 120;
 // Category caps: max riders per category in a legal squad.
 export const CATEGORY_CAPS = {
   Leaders: 3,
