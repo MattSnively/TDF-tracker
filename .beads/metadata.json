@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "TDF_tracker",
+  "project_id": "40f957ce-c042-46be-bbe2-5ee94330fb6e"
+}
