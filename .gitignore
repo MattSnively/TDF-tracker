@@ -19,3 +19,6 @@ __pycache__/
 # Local environment
 .env
 .env.local
+
+# Tissot authenticated session token (local-only secret; in CI it's a GH secret)
+.tissot_token
