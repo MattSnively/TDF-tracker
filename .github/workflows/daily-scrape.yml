@@ -59,27 +59,26 @@ jobs:
           EOF
           fi
 
-      - name: Scrape stage results
+      # Official fantasy data (the source of truth for points/rank). Runs every
+      # day of the window — on rest days it just re-snapshots the same
+      # cumulative totals. Fails loudly if the token has expired.
+      - name: Scrape official Tissot data
+        env:
+          TISSOT_TOKEN: ${{ secrets.TISSOT_TOKEN }}
+        run: python scripts/scrape_official.py
+
+      # Real-race layer (stage results, GC, jerseys) — only on stage days.
+      - name: Scrape race results (letour.fr)
         if: steps.stage.outputs.n != ''
         run: python scripts/scrape_letour.py --stage "${{ steps.stage.outputs.n }}"
 
-      - name: Snapshot Tissot public API
-        if: steps.stage.outputs.n != ''
-        continue-on-error: true # nice-to-have; never blocks the results pipeline
-        run: python scripts/scrape_tissot.py
-
-      - name: Compute fantasy points and rebuild dataset
-        if: steps.stage.outputs.n != ''
-        run: |
-          python scripts/compute_points.py
-          python scripts/build_data.py
+      - name: Build dataset
+        run: python scripts/build_data.py
 
       - name: Run tests
-        if: steps.stage.outputs.n != ''
         run: python -m pytest tests/ -q
 
       - name: Commit and push data
-        if: steps.stage.outputs.n != ''
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -88,7 +87,7 @@ jobs:
             echo "No data changes to commit."
             echo "pushed=false" >> "$GITHUB_ENV"
           else
-            git commit -m "Stage ${{ steps.stage.outputs.n }} data ($(date -u +%F))"
+            git commit -m "Data update $(date -u +%F)${{ steps.stage.outputs.n && format(' (stage {0})', steps.stage.outputs.n) || '' }}"
             git pull --rebase origin main
             git push
             echo "pushed=true" >> "$GITHUB_ENV"

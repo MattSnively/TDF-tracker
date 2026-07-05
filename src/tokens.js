@@ -69,6 +69,18 @@ export const CATEGORY_CAPS = {
 };
 export const TOTAL_STAGES = 21;
 
+// Official point-source breakdown (from stats criteres, grouped in build_data).
+// Fixed display order; colors reuse the validated categorical slots + jerseys.
+export const BREAKDOWN_SOURCES = [
+  { key: "finishes", label: "Stage finishes", color: "#2a78d6" },
+  { key: "climbsSprints", label: "Sprints & climbs", color: "#1baf7a" },
+  { key: "combativity", label: "Combativity", color: "#eb6834" },
+  { key: "gc", label: "Yellow (GC)", color: "#f5c518" },
+  { key: "points", label: "Green (points)", color: "#2e9e4f" },
+  { key: "kom", label: "Polka (KOM)", color: "#d94444" },
+  { key: "youth", label: "White (youth)", color: "#9ca3af" },
+];
+
 /* ── Formatters ── */
 export const fmtPts = (n) => `${(n ?? 0).toLocaleString()} pts`;
 export const fmtN = (n) => (n ?? 0).toLocaleString();

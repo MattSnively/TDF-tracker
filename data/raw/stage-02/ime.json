@@ -1,0 +1,59 @@
+{
+ "stage": 2,
+ "code": "ime",
+ "scraped_at": "2026-07-05T18:17:57.385386+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/2/ime/c1adaf732a348018f5225b1536d02b66/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "A. MOLENAAR",
+   "Rider No.": "224",
+   "Team": "CAJA RURAL-SEGUROS RGA",
+   "Points": "5 PTS",
+   "rank": 1,
+   "name": "A. MOLENAAR",
+   "team": "CAJA RURAL-SEGUROS RGA",
+   "bib": "224"
+  },
+  {
+   "Rank": "2",
+   "Rider": "F. ENGELHARDT",
+   "Rider No.": "114",
+   "Team": "TEAM JAYCO ALULA",
+   "Points": "3 PTS",
+   "rank": 2,
+   "name": "F. ENGELHARDT",
+   "team": "TEAM JAYCO ALULA",
+   "bib": "114"
+  },
+  {
+   "Rank": "3",
+   "Rider": "F. VAN DEN BROEK",
+   "Rider No.": "218",
+   "Team": "TEAM PICNIC POSTNL",
+   "Points": "2 PTS",
+   "rank": 3,
+   "name": "F. VAN DEN BROEK",
+   "team": "TEAM PICNIC POSTNL",
+   "bib": "218"
+  },
+  {
+   "Rank": "4",
+   "Rider": "J. TARLING",
+   "Rider No.": "87",
+   "Team": "NETCOMPANY INEOS CYCLING TEAM",
+   "Points": "1 PT",
+   "rank": 4,
+   "name": "J. TARLING",
+   "team": "NETCOMPANY INEOS CYCLING TEAM",
+   "bib": "87"
+  }
+ ]
+}

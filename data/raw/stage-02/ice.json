@@ -1,0 +1,24 @@
+{
+ "stage": 2,
+ "code": "ice",
+ "scraped_at": "2026-07-05T18:17:56.220999+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/2/ice/77e519df764346d9eb8d7e12eed11a2a/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "F. ENGELHARDT",
+   "Rider No.": "114",
+   "Team": "TEAM JAYCO ALULA",
+   "rank": 1,
+   "name": "F. ENGELHARDT",
+   "team": "TEAM JAYCO ALULA",
+   "bib": "114"
+  }
+ ]
+}

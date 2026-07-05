@@ -51,7 +51,7 @@ export function ValueTab() {
     );
   }
 
-  const riders = getRiders().filter((r) => r.total > 0);
+  const riders = getRiders().filter((r) => r.total > 0 && r.cost != null);
   const byCat = CATEGORIES.map((cat) => ({
     cat,
     data: riders.filter((r) => r.cat === cat),

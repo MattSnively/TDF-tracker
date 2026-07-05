@@ -1,92 +1,57 @@
-/* Riders tab: the full sortable/filterable rider table with per-stage
-   sparklines, plus a click-through detail panel per rider. */
+/* Riders tab: sortable/filterable table of all riders with their official
+   Tissot points, average per stage, cost, value, and a click-through
+   breakdown of where each rider's points came from. */
 
 import { useMemo, useState } from "react";
 
 import { Card, CatChip, SectionTitle } from "../components/Primitives.jsx";
-import { getRiders, getTeams, isPreRace, stagesComplete, teamName } from "../data.js";
+import { getRiders, getTeams, teamName } from "../data.js";
 import {
-  CAT_COLORS,
+  BREAKDOWN_SOURCES,
   CATEGORIES,
   GRAY_200,
   GRAY_500,
   INK,
-  INK_SURFACE,
   fmtN,
-  stageDate,
 } from "../tokens.js";
 
-/** Tiny inline SVG sparkline of a rider's per-stage points. */
-function Sparkline({ rider, stages }) {
-  if (stages.length < 2) return null;
-  const vals = stages.map((n) => rider.pts[String(n)] ?? 0);
-  const max = Math.max(...vals, 1);
-  const w = 80;
-  const h = 20;
-  const step = w / (vals.length - 1);
-  const points = vals
-    .map((v, i) => `${(i * step).toFixed(1)},${(h - (v / max) * (h - 2) - 1).toFixed(1)}`)
-    .join(" ");
+/** Horizontal stacked bar of a rider's points by source. */
+function BreakdownBar({ breakdown, total }) {
+  if (!total) return <span style={{ color: GRAY_500 }}>—</span>;
   return (
-    <svg width={w} height={h} aria-hidden="true">
-      <polyline points={points} fill="none" stroke={CAT_COLORS[rider.cat]} strokeWidth="1.5" />
-    </svg>
+    <div className="flex h-3 w-full rounded overflow-hidden" style={{ background: "var(--gray-100)" }}>
+      {BREAKDOWN_SOURCES.map((s) => {
+        const v = breakdown[s.key] ?? 0;
+        if (v <= 0) return null;
+        return (
+          <div
+            key={s.key}
+            style={{ width: `${(v / total) * 100}%`, background: s.color }}
+            title={`${s.label}: ${v}`}
+          />
+        );
+      })}
+    </div>
   );
 }
 
-/** Expanded detail row: stage-by-stage breakdown for one rider. */
-function RiderDetail({ rider, stages }) {
-  const componentsLabel = {
-    finish: "Finish",
-    sprint: "Sprint",
-    col: "Cols",
-    combativity: "Combativity",
-    gc: "GC bonus",
-    points: "Points-jersey bonus",
-    kom: "KOM-jersey bonus",
-    youth: "Youth bonus",
-    super_combativity: "Super-combativity",
-  };
+function RiderDetail({ rider }) {
   return (
     <tr>
       <td colSpan={7} className="px-4 py-3" style={{ background: "var(--gray-50)" }}>
         <div className="text-[11px] font-medium mb-2" style={{ color: GRAY_500 }}>
-          Stage-by-stage breakdown
+          Points by source ({rider.nbMatchs} stage{rider.nbMatchs === 1 ? "" : "s"})
         </div>
-        <div className="overflow-x-auto">
-          <table className="text-[11px]" style={{ color: INK }}>
-            <thead>
-              <tr style={{ color: GRAY_500 }}>
-                <th className="pr-4 py-1 text-left font-medium">Stage</th>
-                <th className="pr-4 py-1 text-right font-medium">Finish pos</th>
-                <th className="pr-4 py-1 text-right font-medium">GC pos</th>
-                <th className="pr-4 py-1 text-right font-medium">Points</th>
-                <th className="py-1 text-left font-medium">Components</th>
-              </tr>
-            </thead>
-            <tbody>
-              {stages.map((n) => {
-                const k = String(n);
-                const detail = rider.detail[k] ?? {};
-                const [finishRank, gcRank] = rider.ranks[k] ?? [null, null];
-                return (
-                  <tr key={n} className="border-t" style={{ borderColor: GRAY_200 }}>
-                    <td className="pr-4 py-1">S{n} · {stageDate(n)}</td>
-                    <td className="pr-4 py-1 text-right tabular-nums">{finishRank ?? "—"}</td>
-                    <td className="pr-4 py-1 text-right tabular-nums">{gcRank ?? "—"}</td>
-                    <td className="pr-4 py-1 text-right tabular-nums font-semibold">
-                      {fmtN(rider.pts[k] ?? 0)}
-                    </td>
-                    <td className="py-1" style={{ color: GRAY_500 }}>
-                      {Object.entries(detail)
-                        .map(([c, v]) => `${componentsLabel[c] ?? c} ${v}`)
-                        .join(" · ") || "—"}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+        <div className="mb-2">
+          <BreakdownBar breakdown={rider.breakdown} total={rider.total} />
+        </div>
+        <div className="flex flex-wrap gap-x-4 gap-y-1 text-[11px]" style={{ color: INK }}>
+          {BREAKDOWN_SOURCES.filter((s) => (rider.breakdown[s.key] ?? 0) > 0).map((s) => (
+            <span key={s.key} className="inline-flex items-center gap-1">
+              <span className="inline-block w-2 h-2 rounded-full" style={{ background: s.color }} />
+              {s.label}: <b>{rider.breakdown[s.key]}</b>
+            </span>
+          ))}
         </div>
       </td>
     </tr>
@@ -94,12 +59,11 @@ function RiderDetail({ rider, stages }) {
 }
 
 export function RidersTab() {
-  const stages = stagesComplete();
   const teams = getTeams();
   const [search, setSearch] = useState("");
   const [cat, setCat] = useState("");
   const [team, setTeam] = useState("");
-  const [sortKey, setSortKey] = useState(isPreRace() ? "cost" : "total");
+  const [sortKey, setSortKey] = useState("total");
   const [sortDir, setSortDir] = useState(-1);
   const [expanded, setExpanded] = useState(null);
 
@@ -112,7 +76,13 @@ export function RidersTab() {
     if (cat) list = list.filter((r) => r.cat === cat);
     if (team !== "") list = list.filter((r) => r.team === Number(team));
     const val = (r) =>
-      sortKey === "value" ? r.total / r.cost : sortKey === "team" ? teamName(r) : r[sortKey];
+      sortKey === "value"
+        ? r.cost
+          ? r.total / r.cost
+          : 0
+        : sortKey === "team"
+          ? teamName(r)
+          : (r[sortKey] ?? 0);
     return [...list].sort((a, b) => {
       const av = val(a);
       const bv = val(b);
@@ -120,9 +90,9 @@ export function RidersTab() {
     });
   }, [search, cat, team, sortKey, sortDir]);
 
-  const sortBtn = (key, label, align = "right") => (
+  const sortBtn = (key, label) => (
     <th
-      className={`px-2 py-2 font-medium cursor-pointer select-none text-${align}`}
+      className="px-2 py-2 font-medium cursor-pointer select-none text-right"
       onClick={() => {
         if (sortKey === key) setSortDir(-sortDir);
         else {
@@ -138,7 +108,6 @@ export function RidersTab() {
 
   return (
     <div className="pt-4">
-      {/* Filter row */}
       <div className="flex flex-wrap gap-2 items-center">
         <input
           value={search}
@@ -147,34 +116,24 @@ export function RidersTab() {
           className="px-3 py-1.5 text-[12px] rounded border outline-none"
           style={{ background: "var(--card-bg)", borderColor: GRAY_200, color: INK }}
         />
-        <select
-          value={cat}
-          onChange={(e) => setCat(e.target.value)}
+        <select value={cat} onChange={(e) => setCat(e.target.value)}
           className="px-2 py-1.5 text-[12px] rounded border"
-          style={{ background: "var(--card-bg)", borderColor: GRAY_200, color: INK }}
-        >
+          style={{ background: "var(--card-bg)", borderColor: GRAY_200, color: INK }}>
           <option value="">All categories</option>
-          {CATEGORIES.map((c) => (
-            <option key={c} value={c}>{c}</option>
-          ))}
+          {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
         </select>
-        <select
-          value={team}
-          onChange={(e) => setTeam(e.target.value)}
+        <select value={team} onChange={(e) => setTeam(e.target.value)}
           className="px-2 py-1.5 text-[12px] rounded border"
-          style={{ background: "var(--card-bg)", borderColor: GRAY_200, color: INK }}
-        >
+          style={{ background: "var(--card-bg)", borderColor: GRAY_200, color: INK }}>
           <option value="">All teams</option>
-          {teams.map((t, i) => (
-            <option key={t} value={i}>{t}</option>
-          ))}
+          {teams.map((t, i) => <option key={t} value={i}>{t}</option>)}
         </select>
-        <span className="text-[11px]" style={{ color: GRAY_500 }}>
-          {rows.length} riders
-        </span>
+        <span className="text-[11px]" style={{ color: GRAY_500 }}>{rows.length} riders</span>
       </div>
 
-      <SectionTitle>Riders</SectionTitle>
+      <SectionTitle right={<span className="text-[11px]" style={{ color: GRAY_500 }}>official Tissot points · click a rider for the breakdown</span>}>
+        Riders
+      </SectionTitle>
       <Card className="p-0 overflow-x-auto">
         <table className="w-full text-[12px]">
           <thead>
@@ -184,19 +143,14 @@ export function RidersTab() {
               <th className="px-2 py-2 font-medium hidden md:table-cell">Team</th>
               {sortBtn("cost", "Cost")}
               {sortBtn("total", "Points")}
+              {sortBtn("avg", "Avg/stage")}
               {sortBtn("value", "Pts/★")}
-              <th className="px-4 py-2 font-medium hidden sm:table-cell">Trend</th>
             </tr>
           </thead>
           <tbody>
             {rows.map((r) => (
-              <RowPair
-                key={r.id}
-                rider={r}
-                stages={stages}
-                expanded={expanded === r.id}
-                onToggle={() => setExpanded(expanded === r.id ? null : r.id)}
-              />
+              <RowPair key={r.id} rider={r} expanded={expanded === r.id}
+                onToggle={() => setExpanded(expanded === r.id ? null : r.id)} />
             ))}
           </tbody>
         </table>
@@ -205,29 +159,23 @@ export function RidersTab() {
   );
 }
 
-function RowPair({ rider, stages, expanded, onToggle }) {
+function RowPair({ rider, expanded, onToggle }) {
   return (
     <>
-      <tr
-        className="border-t cursor-pointer"
+      <tr className="border-t cursor-pointer"
         style={{ borderColor: GRAY_200, color: INK, background: expanded ? "var(--gray-50)" : undefined }}
-        onClick={onToggle}
-      >
+        onClick={onToggle}>
         <td className="px-4 py-1.5 font-medium whitespace-nowrap">{rider.name}</td>
         <td className="px-2 py-1.5"><CatChip cat={rider.cat} /></td>
-        <td className="px-2 py-1.5 hidden md:table-cell" style={{ color: GRAY_500 }}>
-          {teamName(rider)}
-        </td>
-        <td className="px-2 py-1.5 text-right tabular-nums">{rider.cost}★</td>
+        <td className="px-2 py-1.5 hidden md:table-cell" style={{ color: GRAY_500 }}>{teamName(rider)}</td>
+        <td className="px-2 py-1.5 text-right tabular-nums">{rider.cost != null ? `${rider.cost}★` : "—"}</td>
         <td className="px-2 py-1.5 text-right tabular-nums font-semibold">{fmtN(rider.total)}</td>
+        <td className="px-2 py-1.5 text-right tabular-nums" style={{ color: GRAY_500 }}>{rider.avg}</td>
         <td className="px-2 py-1.5 text-right tabular-nums" style={{ color: GRAY_500 }}>
-          {(rider.total / rider.cost).toFixed(1)}
-        </td>
-        <td className="px-4 py-1.5 hidden sm:table-cell">
-          <Sparkline rider={rider} stages={stages} />
+          {rider.cost ? (rider.total / rider.cost).toFixed(1) : "—"}
         </td>
       </tr>
-      {expanded && stages.length > 0 && <RiderDetail rider={rider} stages={stages} />}
+      {expanded && <RiderDetail rider={rider} />}
     </>
   );
 }

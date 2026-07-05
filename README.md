@@ -5,104 +5,102 @@ fantasy points for the 2026 Tour de France (July 4–26).
 
 🚀 **Live:** https://mattsnively.github.io/TDF-tracker/
 
-Six tabs: **Overview** (jerseys, KPIs, points race), **Stages** (per-stage
-results and fantasy hauls), **Riders** (sortable table with stage-by-stage
-breakdowns), **Teams** (pro-team aggregates), **Value** (cost-vs-points and
-the optimal squad), and **My Team** (a browser-local team builder — pick 8
-riders under the game's budget and category caps, choose a captain, and track
-your score; saved in localStorage, no account needed).
+Six tabs: **Overview** (KPIs, jersey holders, top scorers by point source, my
+rank), **Stages** (real race result + GC and my official scorecard per stage),
+**Riders** (every rider's official points with a click-through source
+breakdown), **Teams** (pro-team aggregates), **Value** (cost-vs-points and the
+optimal squad), and **My Team** (my actual official squad, rank, and league,
+plus a browser-local "build your own" scored by official points).
 
-## Stack
+## Fantasy points come straight from the game
 
-- **React 18** + **Vite 5** + **Tailwind CSS** + **Recharts**
-- **Python** (requests + BeautifulSoup) for the data pipeline
-- **GitHub Actions** for the nightly scrape and GitHub Pages deploys
+Fantasy points are the **official Tissot scores**, pulled from the game's
+authenticated API — they match the game exactly (captain ×2, jersey bonuses,
+the Tissot Bonus Question all reconcile). We do **not** recompute points from
+rules; an early attempt to do so drifted badly on special stages (e.g. stage 1
+was a *team* time trial scored as 1/8 of the team's result).
 
 ## Data pipeline
 
 ```
-letour.fr/en/rankings (official classifications, server-rendered HTML)
-   │  scripts/scrape_letour.py   — nightly per stage, all classifications
+Tissot fantasy API (authenticated — Matt's ~30-day JWT)
+   │  scripts/scrape_official.py
    ▼
-data/raw/stage-NN/{ite,ipe,ime,ije,ete,ice,itg,ipg,img,ijg,etg,icg}.json
-   │  scripts/compute_points.py  — Tissot scoring rules → fantasy points
+data/official/{stats-latest,journees,myteam,standings}.json + snapshots/
+        POST /private/stats          all riders, cumulative points by source
+        GET  /private/journee/{n}    stage meta + my rank
+        GET  /private/feuillematch/{stage}/{idjg}   my scorecard per stage
+        GET  /private/classementgeneral/{league}    standings
+
+letour.fr/en/rankings (public, server-rendered HTML) — the real-race layer
+   │  scripts/scrape_letour.py   (stage results, GC, jerseys, time gaps)
    ▼
-data/points.json
-   │  scripts/build_data.py      — join with data/riders.csv roster
-   ▼
-public/data/tdf.json             — the only file the dashboard loads
+data/raw/stage-NN/*.json
+
+   both ─▶ scripts/build_data.py ─▶ public/data/tdf.json  (the only file the app loads)
 ```
 
-The roster (`data/riders.csv`) came from the Tissot fantasy game's rider pool
-via `scripts/convert_roster.py` (184 riders: star cost, category, team).
-`scripts/scrape_tissot.py` snapshots the game's public API (clubs, rules, and
-the rider pool endpoint) for cross-checking.
+`build_data.py` joins official points to `data/riders.csv` (star costs, since
+`/private/stats` omits cost) by an accent/ligature-folded name key, and layers
+in the letour.fr race results. Per-stage points for all riders come from
+day-over-day deltas of the dated `snapshots/`; my own team has exact per-stage
+points from `feuillematch`.
 
-### Classification codes (letour.fr)
+### Authentication
 
-Stage-level: `ite` stage result · `ipe` intermediate sprint · `ime` KOM points
-won in-stage · `ije` youth · `ete` team · `ice` combativity. General (evening
-standings, scraped same night): `itg` GC · `ipg` points · `img` KOM · `ijg`
-youth · `etg` team · `icg` super-combativity.
+`scrape_official.py` needs a bearer JWT from the fantasy site. Grab it from the
+browser console on fantasybytissot.letour.fr:
 
-### Fantasy scoring
+```js
+copy(localStorage.getItem(Object.keys(localStorage).find(k => k.startsWith('jwtToken'))))
+```
 
-Computed from the published Tissot rules (snapshot in
-`data/reference/rules.json`, tables in `scripts/compute_points.py`):
-
-- **Stage finish** 200/150/120/…/1 (1st→100th) · **intermediate sprint**
-  30/25/20/…/2 (1st→15th, from `ipe` order) · **col points** = official KOM
-  points won in-stage (the official TdF per-col scale is identical to
-  Tissot's) · **combativity** 30 (stages 1–20)
-- **Evening jersey bonuses** — GC 50/45/…/1 (→100th), points & KOM 30/26/…/1
-  (→15th), youth 20/18/…/1 (→15th); **×3 on stage 21**; super-combativity 90
-  on stage 21
-- **Known gap:** breakaway-kilometre points (1/km in the lead group) aren't
-  published in official classifications and are omitted — flagged in the
-  dashboard footer.
+Save it to `tissot_token.txt` (gitignored) for local runs, and as the
+`TISSOT_TOKEN` GitHub secret for CI (`gh secret set TISSOT_TOKEN < tissot_token.txt`).
+The token lasts ~30 days; `scrape_official.py` warns when it's within 3 days of
+expiry. Refresh by repeating the steps above.
 
 ## Updating the data
 
-The [Daily stage scrape](.github/workflows/daily-scrape.yml) runs every Tour
-evening at 19:45 UTC: scrape → compute → build → commit (`Stage N data`) →
-trigger deploy. Run it off-schedule with:
+The [Daily scrape](.github/workflows/daily-scrape.yml) runs 16:30 UTC (11:30 AM
+Central) every day of the Tour: official scrape → letour scrape (stage days) →
+build → commit → deploy. Off-schedule:
 
 ```bash
 gh workflow run "Daily stage scrape" --ref main            # auto stage number
 gh workflow run "Daily stage scrape" --ref main -f stage=7 # specific stage
 ```
 
-Manual fallback:
+Manual local run:
 
 ```bash
 pip install -r requirements.txt
-python scripts/scrape_letour.py --stage 7   # add --no-general when backfilling
-python scripts/compute_points.py
+python scripts/scrape_official.py            # needs tissot_token.txt
+python scripts/scrape_letour.py --stage 7    # add --no-general when backfilling
 python scripts/build_data.py
-git add data/ public/data/ && git commit -m "Stage 7 data" && git push
+git add data/ public/data/ && git commit -m "Data update" && git push
 ```
 
-Watch the build_data output for `unmatched result names` warnings — a rider
-scoring points who can't be joined to the roster needs an entry in `ALIASES`
+Watch `build_data.py` for `no cost match` warnings — a rider whose official
+name can't be joined to the roster needs a `ROSTER_ALIASES` entry
 (scripts/build_data.py).
 
 ## Development
 
 ```bash
 npm install
-npm run dev            # http://localhost:5173
-python -m pytest tests/ -q   # scoring-engine tests (2025 stage-1 fixture)
+npm run dev                  # http://localhost:5173
+python -m pytest tests/ -q   # roster name-matching + scoring-table tests
 ```
 
 Deploys happen automatically on push to `main` via
-`.github/workflows/deploy.yml` (Pages source must be set to GitHub Actions in
-repo settings).
+`.github/workflows/deploy.yml` (Pages source must be set to GitHub Actions).
 
 ## Notes
 
 - `STAR_BUDGET` in `src/tokens.js` is 120 (confirmed against the live game).
-- The general-classification pages only show the *latest* standings, so the
-  nightly scrape is also the historical record: a missed night should be
-  re-run with `--no-general` for the stage tables, and the evening GC snapshot
-  for that stage is lost (jersey bonuses for that stage would need the
-  Playwright fallback or manual entry).
+- `scripts/compute_points.py` (rule-based scoring) is retained only for its
+  `name_key` roster matcher and its tests; it is no longer the point source.
+- letour.fr's general-classification page only shows the latest stage, so a
+  past stage's GC/jerseys can't be backfilled later — the daily run captures
+  them each evening.

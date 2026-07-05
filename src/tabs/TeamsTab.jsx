@@ -26,8 +26,6 @@ export function TeamsTab() {
     return (
       <div className="pt-4">
         <PreRaceNotice>Team standings appear once stage results exist.</PreRaceNotice>
-        <SectionTitle>Rosters &amp; budget structure</SectionTitle>
-        <TeamCards teams={teams} preRace />
       </div>
     );
   }
@@ -87,7 +85,7 @@ function TeamCards({ teams, preRace = false }) {
                 <tr key={r.id} className="border-t first:border-t-0" style={{ borderColor: "var(--gray-100)", color: INK }}>
                   <td className="px-4 py-1 font-medium whitespace-nowrap">{r.name}</td>
                   <td className="px-1 py-1"><CatChip cat={r.cat} /></td>
-                  <td className="px-2 py-1 text-right tabular-nums" style={{ color: GRAY_500 }}>{r.cost}★</td>
+                  <td className="px-2 py-1 text-right tabular-nums" style={{ color: GRAY_500 }}>{r.cost != null ? `${r.cost}★` : "—"}</td>
                   <td className="px-4 py-1 text-right tabular-nums font-semibold">
                     {preRace ? "" : fmtN(r.total)}
                   </td>
