@@ -2,10 +2,11 @@ name: Daily stage scrape
 
 on:
   schedule:
-    # 19:45 UTC (21:45 CEST) every day of the Tour window, July 4-26 2026 —
-    # comfortably after each stage finishes (~17:30 CEST) and results are
-    # official. Rest days (Jul 13, 20) simply find no new stage and no-op.
-    - cron: "45 19 4-26 7 *"
+    # 18:00 UTC = 1:00 PM US Central (CDT, July) every day of the Tour window,
+    # July 4-26 2026. Stages finish ~17:15 CEST (15:15 UTC / 10:15 CT), so
+    # results are long since official by 1 PM Central. Rest days (Jul 13, 20)
+    # simply find no new stage and no-op.
+    - cron: "0 18 4-26 7 *"
   workflow_dispatch:
     inputs:
       stage:
