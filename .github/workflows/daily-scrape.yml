@@ -2,12 +2,12 @@ name: Daily stage scrape
 
 on:
   schedule:
-    # 16:00 UTC = 11:00 AM US Central (CDT, July) every day of the Tour window,
+    # 16:30 UTC = 11:30 AM US Central (CDT, July) every day of the Tour window,
     # July 4-26 2026. Stages finish ~17:15 CEST (15:15 UTC / 10:15 CT), so
-    # results and official fantasy scoring are posted by 11 AM Central. Matt
+    # results and official fantasy scoring are posted by 11:30 AM Central. Matt
     # refreshes the Tissot session around this time. Rest days (Jul 13, 20)
     # find no new stage and no-op.
-    - cron: "0 16 4-26 7 *"
+    - cron: "30 16 4-26 7 *"
   workflow_dispatch:
     inputs:
       stage:

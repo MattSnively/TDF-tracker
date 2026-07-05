@@ -22,3 +22,4 @@ __pycache__/
 
 # Tissot authenticated session token (local-only secret; in CI it's a GH secret)
 .tissot_token
+tissot_token.*
