@@ -1,0 +1,37 @@
+{
+ "stage": 3,
+ "code": "ime",
+ "scraped_at": "2026-07-06T18:27:26.752491+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/3/ime/645ac89a1cd2fabcfec7dbff09885f16/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "V. PARET PEINTRE",
+   "Rider No.": "93",
+   "Team": "SOUDAL QUICK-STEP",
+   "Points": "2 PTS",
+   "rank": 1,
+   "name": "V. PARET PEINTRE",
+   "team": "SOUDAL QUICK-STEP",
+   "bib": "93"
+  },
+  {
+   "Rank": "2",
+   "Rider": "J. ROMO",
+   "Rider No.": "147",
+   "Team": "MOVISTAR TEAM",
+   "Points": "1 PT",
+   "rank": 2,
+   "name": "J. ROMO",
+   "team": "MOVISTAR TEAM",
+   "bib": "147"
+  }
+ ]
+}

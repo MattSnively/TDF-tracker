@@ -1,0 +1,24 @@
+{
+ "stage": 3,
+ "code": "ice",
+ "scraped_at": "2026-07-06T18:27:26.579422+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/3/ice/ed34743722deb88832d11cca6862f937/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "A. BAUDIN",
+   "Rider No.": "43",
+   "Team": "EF EDUCATION - EASYPOST",
+   "rank": 1,
+   "name": "A. BAUDIN",
+   "team": "EF EDUCATION - EASYPOST",
+   "bib": "43"
+  }
+ ]
+}
