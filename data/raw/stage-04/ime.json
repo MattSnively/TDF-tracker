@@ -1,0 +1,26 @@
+{
+ "stage": 4,
+ "code": "ime",
+ "scraped_at": "2026-07-07T18:31:27.404715+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/4/ime/a52a8cb1a4acb8df2eddf2ad6f055a8f/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "A. MOLENAAR",
+   "Rider No.": "224",
+   "Team": "CAJA RURAL-SEGUROS RGA",
+   "Points": "1 PT",
+   "rank": 1,
+   "name": "A. MOLENAAR",
+   "team": "CAJA RURAL-SEGUROS RGA",
+   "bib": "224"
+  }
+ ]
+}

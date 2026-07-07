@@ -1,0 +1,24 @@
+{
+ "stage": 4,
+ "code": "ice",
+ "scraped_at": "2026-07-07T18:31:27.257835+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/4/ice/cee20ca687fc3decefc1514a050a4f26/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "P. CASTRILLO",
+   "Rider No.": "142",
+   "Team": "MOVISTAR TEAM",
+   "rank": 1,
+   "name": "P. CASTRILLO",
+   "team": "MOVISTAR TEAM",
+   "bib": "142"
+  }
+ ]
+}
