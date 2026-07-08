@@ -1,0 +1,37 @@
+{
+ "stage": 5,
+ "code": "ime",
+ "scraped_at": "2026-07-08T18:02:33.394828+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/5/ime/472de0fb6069671d375ffdd7033ae306/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "B. VEISTROFFER",
+   "Rider No.": "157",
+   "Team": "LOTTO INTERMARCHE",
+   "Points": "2 PTS",
+   "rank": 1,
+   "name": "B. VEISTROFFER",
+   "team": "LOTTO INTERMARCHE",
+   "bib": "157"
+  },
+  {
+   "Rank": "2",
+   "Rider": "A. BAUDIN",
+   "Rider No.": "43",
+   "Team": "EF EDUCATION - EASYPOST",
+   "Points": "1 PT",
+   "rank": 2,
+   "name": "A. BAUDIN",
+   "team": "EF EDUCATION - EASYPOST",
+   "bib": "43"
+  }
+ ]
+}
