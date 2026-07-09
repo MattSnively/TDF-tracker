@@ -1,0 +1,24 @@
+{
+ "stage": 6,
+ "code": "ice",
+ "scraped_at": "2026-07-09T18:19:17.358232+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/6/ice/aca3b66daca983fd56e646bd099d82c8/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "T. POGACAR",
+   "Rider No.": "1",
+   "Team": "UAE TEAM EMIRATES XRG",
+   "rank": 1,
+   "name": "T. POGACAR",
+   "team": "UAE TEAM EMIRATES XRG",
+   "bib": "1"
+  }
+ ]
+}
