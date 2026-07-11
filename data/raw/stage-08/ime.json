@@ -1,0 +1,26 @@
+{
+ "stage": 8,
+ "code": "ime",
+ "scraped_at": "2026-07-11T17:32:02.583808+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/8/ime/069d03e0ecf458d5a572ca7f914f2dee/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "L. SLOCK",
+   "Rider No.": "155",
+   "Team": "LOTTO INTERMARCHE",
+   "Points": "1 PT",
+   "rank": 1,
+   "name": "L. SLOCK",
+   "team": "LOTTO INTERMARCHE",
+   "bib": "155"
+  }
+ ]
+}
