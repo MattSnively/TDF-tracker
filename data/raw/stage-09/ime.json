@@ -1,0 +1,37 @@
+{
+ "stage": 9,
+ "code": "ime",
+ "scraped_at": "2026-07-12T17:34:51.014513+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/9/ime/9d2e991601254abf04a135b90a71eac6/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "V. PARET PEINTRE",
+   "Rider No.": "93",
+   "Team": "SOUDAL QUICK-STEP",
+   "Points": "2 PTS",
+   "rank": 1,
+   "name": "V. PARET PEINTRE",
+   "team": "SOUDAL QUICK-STEP",
+   "bib": "93"
+  },
+  {
+   "Rank": "2",
+   "Rider": "M. JORGENSON",
+   "Rider No.": "16",
+   "Team": "TEAM VISMA | LEASE A BIKE",
+   "Points": "1 PT",
+   "rank": 2,
+   "name": "M. JORGENSON",
+   "team": "TEAM VISMA | LEASE A BIKE",
+   "bib": "16"
+  }
+ ]
+}
