@@ -1,0 +1,37 @@
+{
+ "stage": 10,
+ "code": "ime",
+ "scraped_at": "2026-07-14T17:42:30.375170+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/10/ime/f606548b9f74d7f26d7e66bc4d8a8ecd/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "V. PARET PEINTRE",
+   "Rider No.": "93",
+   "Team": "SOUDAL QUICK-STEP",
+   "Points": "2 PTS",
+   "rank": 1,
+   "name": "V. PARET PEINTRE",
+   "team": "SOUDAL QUICK-STEP",
+   "bib": "93"
+  },
+  {
+   "Rank": "2",
+   "Rider": "L. VERVAEKE",
+   "Rider No.": "98",
+   "Team": "SOUDAL QUICK-STEP",
+   "Points": "1 PT",
+   "rank": 2,
+   "name": "L. VERVAEKE",
+   "team": "SOUDAL QUICK-STEP",
+   "bib": "98"
+  }
+ ]
+}
