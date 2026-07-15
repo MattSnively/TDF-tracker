@@ -1,0 +1,24 @@
+{
+ "stage": 11,
+ "code": "ice",
+ "scraped_at": "2026-07-15T17:49:22.114463+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/11/ice/30d16ce4097134794956379844f0cd63/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "A. CHARMIG",
+   "Rider No.": "123",
+   "Team": "UNO-X MOBILITY",
+   "rank": 1,
+   "name": "A. CHARMIG",
+   "team": "UNO-X MOBILITY",
+   "bib": "123"
+  }
+ ]
+}
