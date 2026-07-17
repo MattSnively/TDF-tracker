@@ -1,0 +1,22 @@
+{
+ "stage": 13,
+ "code": "iqe",
+ "scraped_at": "2026-07-17T17:40:36.659105+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/13/iqe/501564367fbf84dc5986647fc82cecaa/subtab",
+ "headers": [
+  "Rider",
+  "Rider No.",
+  "Team"
+ ],
+ "rows": [
+  {
+   "Rider": "B. VEISTROFFER",
+   "Rider No.": "157",
+   "Team": "LOTTO INTERMARCHE",
+   "rank": null,
+   "name": "B. VEISTROFFER",
+   "team": "LOTTO INTERMARCHE",
+   "bib": "157"
+  }
+ ]
+}

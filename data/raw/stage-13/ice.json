@@ -1,0 +1,24 @@
+{
+ "stage": 13,
+ "code": "ice",
+ "scraped_at": "2026-07-17T17:40:36.446287+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/13/ice/803aefdb9d69387b09355ef5af6fd27e/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "T. PIDCOCK",
+   "Rider No.": "171",
+   "Team": "PINARELLO-Q36.5 PRO CYCLING TEAM",
+   "rank": 1,
+   "name": "T. PIDCOCK",
+   "team": "PINARELLO-Q36.5 PRO CYCLING TEAM",
+   "bib": "171"
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "stage": 13,
+ "code": "ime",
+ "scraped_at": "2026-07-17T17:40:36.565479+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/13/ime/8c366743c814bbb9121dfb3517e634f1/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "Q. HERMANS",
+   "Rider No.": "174",
+   "Team": "PINARELLO-Q36.5 PRO CYCLING TEAM",
+   "Points": "2 PTS",
+   "rank": 1,
+   "name": "Q. HERMANS",
+   "team": "PINARELLO-Q36.5 PRO CYCLING TEAM",
+   "bib": "174"
+  },
+  {
+   "Rank": "2",
+   "Rider": "T. PIDCOCK",
+   "Rider No.": "171",
+   "Team": "PINARELLO-Q36.5 PRO CYCLING TEAM",
+   "Points": "1 PT",
+   "rank": 2,
+   "name": "T. PIDCOCK",
+   "team": "PINARELLO-Q36.5 PRO CYCLING TEAM",
+   "bib": "171"
+  }
+ ]
+}
