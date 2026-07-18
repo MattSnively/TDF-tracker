@@ -1,0 +1,81 @@
+{
+ "stage": 14,
+ "code": "ime",
+ "scraped_at": "2026-07-18T17:32:47.006697+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/14/ime/8246610768ce7594bb1d9b436c2ec33d/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "V. PARET PEINTRE",
+   "Rider No.": "93",
+   "Team": "SOUDAL QUICK-STEP",
+   "Points": "10 PTS",
+   "rank": 1,
+   "name": "V. PARET PEINTRE",
+   "team": "SOUDAL QUICK-STEP",
+   "bib": "93"
+  },
+  {
+   "Rank": "2",
+   "Rider": "R. CARAPAZ",
+   "Rider No.": "41",
+   "Team": "EF EDUCATION - EASYPOST",
+   "Points": "8 PTS",
+   "rank": 2,
+   "name": "R. CARAPAZ",
+   "team": "EF EDUCATION - EASYPOST",
+   "bib": "41"
+  },
+  {
+   "Rank": "3",
+   "Rider": "B. HEALY",
+   "Rider No.": "44",
+   "Team": "EF EDUCATION - EASYPOST",
+   "Points": "6 PTS",
+   "rank": 3,
+   "name": "B. HEALY",
+   "team": "EF EDUCATION - EASYPOST",
+   "bib": "44"
+  },
+  {
+   "Rank": "4",
+   "Rider": "T. JOHANNESSEN",
+   "Rider No.": "121",
+   "Team": "UNO-X MOBILITY",
+   "Points": "4 PTS",
+   "rank": 4,
+   "name": "T. JOHANNESSEN",
+   "team": "UNO-X MOBILITY",
+   "bib": "121"
+  },
+  {
+   "Rank": "5",
+   "Rider": "A. JOHANNESSEN",
+   "Rider No.": "125",
+   "Team": "UNO-X MOBILITY",
+   "Points": "2 PTS",
+   "rank": 5,
+   "name": "A. JOHANNESSEN",
+   "team": "UNO-X MOBILITY",
+   "bib": "125"
+  },
+  {
+   "Rank": "6",
+   "Rider": "K. VAUQUELIN",
+   "Rider No.": "88",
+   "Team": "NETCOMPANY INEOS CYCLING TEAM",
+   "Points": "1 PT",
+   "rank": 6,
+   "name": "K. VAUQUELIN",
+   "team": "NETCOMPANY INEOS CYCLING TEAM",
+   "bib": "88"
+  }
+ ]
+}
