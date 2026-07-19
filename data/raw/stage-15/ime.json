@@ -1,0 +1,37 @@
+{
+ "stage": 15,
+ "code": "ime",
+ "scraped_at": "2026-07-19T17:33:10.814920+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/15/ime/874f86a9b8910a0b7ebe13eeb2b08d1b/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "V. PARET PEINTRE",
+   "Rider No.": "93",
+   "Team": "SOUDAL QUICK-STEP",
+   "Points": "2 PTS",
+   "rank": 1,
+   "name": "V. PARET PEINTRE",
+   "team": "SOUDAL QUICK-STEP",
+   "bib": "93"
+  },
+  {
+   "Rank": "2",
+   "Rider": "R. CARAPAZ",
+   "Rider No.": "41",
+   "Team": "EF EDUCATION - EASYPOST",
+   "Points": "1 PT",
+   "rank": 2,
+   "name": "R. CARAPAZ",
+   "team": "EF EDUCATION - EASYPOST",
+   "bib": "41"
+  }
+ ]
+}
