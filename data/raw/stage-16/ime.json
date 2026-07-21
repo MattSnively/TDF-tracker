@@ -1,0 +1,59 @@
+{
+ "stage": 16,
+ "code": "ime",
+ "scraped_at": "2026-07-21T17:54:36.346513+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/16/ime/ee92fadb6dd611e1a7a9991924c61997/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "R. EVENEPOEL",
+   "Rider No.": "21",
+   "Team": "RED BULL - BORA - HANSGROHE",
+   "Points": "5 PTS",
+   "rank": 1,
+   "name": "R. EVENEPOEL",
+   "team": "RED BULL - BORA - HANSGROHE",
+   "bib": "21"
+  },
+  {
+   "Rank": "2",
+   "Rider": "T. POGACAR",
+   "Rider No.": "1",
+   "Team": "UAE TEAM EMIRATES XRG",
+   "Points": "3 PTS",
+   "rank": 2,
+   "name": "T. POGACAR",
+   "team": "UAE TEAM EMIRATES XRG",
+   "bib": "1"
+  },
+  {
+   "Rank": "3",
+   "Rider": "M. SKJELMOSE",
+   "Rider No.": "35",
+   "Team": "LIDL-TREK",
+   "Points": "2 PTS",
+   "rank": 3,
+   "name": "M. SKJELMOSE",
+   "team": "LIDL-TREK",
+   "bib": "35"
+  },
+  {
+   "Rank": "4",
+   "Rider": "F. LIPOWITZ",
+   "Rider No.": "25",
+   "Team": "RED BULL - BORA - HANSGROHE",
+   "Points": "1 PT",
+   "rank": 4,
+   "name": "F. LIPOWITZ",
+   "team": "RED BULL - BORA - HANSGROHE",
+   "bib": "25"
+  }
+ ]
+}
