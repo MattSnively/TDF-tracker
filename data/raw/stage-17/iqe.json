@@ -1,0 +1,22 @@
+{
+ "stage": 17,
+ "code": "iqe",
+ "scraped_at": "2026-07-22T17:51:11.764135+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/17/iqe/4791b21694eb824be5dd3e12c2f9e963/subtab",
+ "headers": [
+  "Rider",
+  "Rider No.",
+  "Team"
+ ],
+ "rows": [
+  {
+   "Rider": "Q. SIMMONS",
+   "Rider No.": "34",
+   "Team": "LIDL-TREK",
+   "rank": null,
+   "name": "Q. SIMMONS",
+   "team": "LIDL-TREK",
+   "bib": "34"
+  }
+ ]
+}

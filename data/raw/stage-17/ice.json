@@ -1,0 +1,24 @@
+{
+ "stage": 17,
+ "code": "ice",
+ "scraped_at": "2026-07-22T17:51:11.338851+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/17/ice/edc75f55a9ecd5199c21cf3b9f602112/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "M. PEDERSEN",
+   "Rider No.": "33",
+   "Team": "LIDL-TREK",
+   "rank": 1,
+   "name": "M. PEDERSEN",
+   "team": "LIDL-TREK",
+   "bib": "33"
+  }
+ ]
+}

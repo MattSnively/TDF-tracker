@@ -1,0 +1,268 @@
+{
+ "stage": 17,
+ "code": "ete",
+ "scraped_at": "2026-07-22T17:51:11.253189+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/17/ete/78b2f315c32d43385c5b472f79e27fdb/subtab",
+ "headers": [
+  "Rank",
+  "Team",
+  "Times",
+  "Gap",
+  "P"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Team": "LIDL-TREK",
+   "Times": "11h 04' 14''",
+   "Gap": "-",
+   "P": "-",
+   "rank": 1,
+   "name": "LIDL-TREK",
+   "team": "LIDL-TREK",
+   "bib": ""
+  },
+  {
+   "Rank": "2",
+   "Team": "MOVISTAR TEAM",
+   "Times": "11h 04' 51''",
+   "Gap": "+ 00h 00' 37''",
+   "P": "-",
+   "rank": 2,
+   "name": "MOVISTAR TEAM",
+   "team": "MOVISTAR TEAM",
+   "bib": ""
+  },
+  {
+   "Rank": "3",
+   "Team": "EF EDUCATION - EASYPOST",
+   "Times": "11h 06' 00''",
+   "Gap": "+ 00h 01' 46''",
+   "P": "-",
+   "rank": 3,
+   "name": "EF EDUCATION - EASYPOST",
+   "team": "EF EDUCATION - EASYPOST",
+   "bib": ""
+  },
+  {
+   "Rank": "4",
+   "Team": "TOTALENERGIES",
+   "Times": "11h 06' 47''",
+   "Gap": "+ 00h 02' 33''",
+   "P": "-",
+   "rank": 4,
+   "name": "TOTALENERGIES",
+   "team": "TOTALENERGIES",
+   "bib": ""
+  },
+  {
+   "Rank": "5",
+   "Team": "GROUPAMA-FDJ UNITED",
+   "Times": "11h 06' 54''",
+   "Gap": "+ 00h 02' 40''",
+   "P": "-",
+   "rank": 5,
+   "name": "GROUPAMA-FDJ UNITED",
+   "team": "GROUPAMA-FDJ UNITED",
+   "bib": ""
+  },
+  {
+   "Rank": "6",
+   "Team": "TEAM JAYCO ALULA",
+   "Times": "11h 07' 01''",
+   "Gap": "+ 00h 02' 47''",
+   "P": "-",
+   "rank": 6,
+   "name": "TEAM JAYCO ALULA",
+   "team": "TEAM JAYCO ALULA",
+   "bib": ""
+  },
+  {
+   "Rank": "7",
+   "Team": "ALPECIN-PREMIER TECH",
+   "Times": "11h 08' 25''",
+   "Gap": "+ 00h 04' 11''",
+   "P": "-",
+   "rank": 7,
+   "name": "ALPECIN-PREMIER TECH",
+   "team": "ALPECIN-PREMIER TECH",
+   "bib": ""
+  },
+  {
+   "Rank": "8",
+   "Team": "NETCOMPANY INEOS CYCLING TEAM",
+   "Times": "11h 09' 58''",
+   "Gap": "+ 00h 05' 44''",
+   "P": "-",
+   "rank": 8,
+   "name": "NETCOMPANY INEOS CYCLING TEAM",
+   "team": "NETCOMPANY INEOS CYCLING TEAM",
+   "bib": ""
+  },
+  {
+   "Rank": "9",
+   "Team": "TEAM VISMA | LEASE A BIKE",
+   "Times": "11h 11' 31''",
+   "Gap": "+ 00h 07' 17''",
+   "P": "-",
+   "rank": 9,
+   "name": "TEAM VISMA | LEASE A BIKE",
+   "team": "TEAM VISMA | LEASE A BIKE",
+   "bib": ""
+  },
+  {
+   "Rank": "10",
+   "Team": "RED BULL - BORA - HANSGROHE",
+   "Times": "11h 12' 25''",
+   "Gap": "+ 00h 08' 11''",
+   "P": "-",
+   "rank": 10,
+   "name": "RED BULL - BORA - HANSGROHE",
+   "team": "RED BULL - BORA - HANSGROHE",
+   "bib": ""
+  },
+  {
+   "Rank": "11",
+   "Team": "LOTTO INTERMARCHE",
+   "Times": "11h 12' 25''",
+   "Gap": "+ 00h 08' 11''",
+   "P": "-",
+   "rank": 11,
+   "name": "LOTTO INTERMARCHE",
+   "team": "LOTTO INTERMARCHE",
+   "bib": ""
+  },
+  {
+   "Rank": "12",
+   "Team": "DECATHLON CMA CGM TEAM",
+   "Times": "11h 12' 41''",
+   "Gap": "+ 00h 08' 27''",
+   "P": "-",
+   "rank": 12,
+   "name": "DECATHLON CMA CGM TEAM",
+   "team": "DECATHLON CMA CGM TEAM",
+   "bib": ""
+  },
+  {
+   "Rank": "13",
+   "Team": "XDS ASTANA TEAM",
+   "Times": "11h 15' 22''",
+   "Gap": "+ 00h 11' 08''",
+   "P": "-",
+   "rank": 13,
+   "name": "XDS ASTANA TEAM",
+   "team": "XDS ASTANA TEAM",
+   "bib": ""
+  },
+  {
+   "Rank": "14",
+   "Team": "BAHRAIN VICTORIOUS",
+   "Times": "11h 15' 28''",
+   "Gap": "+ 00h 11' 14''",
+   "P": "-",
+   "rank": 14,
+   "name": "BAHRAIN VICTORIOUS",
+   "team": "BAHRAIN VICTORIOUS",
+   "bib": ""
+  },
+  {
+   "Rank": "15",
+   "Team": "TUDOR PRO CYCLING TEAM",
+   "Times": "11h 21' 11''",
+   "Gap": "+ 00h 16' 57''",
+   "P": "-",
+   "rank": 15,
+   "name": "TUDOR PRO CYCLING TEAM",
+   "team": "TUDOR PRO CYCLING TEAM",
+   "bib": ""
+  },
+  {
+   "Rank": "16",
+   "Team": "PINARELLO-Q36.5 PRO CYCLING TEAM",
+   "Times": "11h 21' 11''",
+   "Gap": "+ 00h 16' 57''",
+   "P": "-",
+   "rank": 16,
+   "name": "PINARELLO-Q36.5 PRO CYCLING TEAM",
+   "team": "PINARELLO-Q36.5 PRO CYCLING TEAM",
+   "bib": ""
+  },
+  {
+   "Rank": "17",
+   "Team": "NSN CYCLING TEAM",
+   "Times": "11h 21' 11''",
+   "Gap": "+ 00h 16' 57''",
+   "P": "-",
+   "rank": 17,
+   "name": "NSN CYCLING TEAM",
+   "team": "NSN CYCLING TEAM",
+   "bib": ""
+  },
+  {
+   "Rank": "18",
+   "Team": "COFIDIS",
+   "Times": "11h 21' 11''",
+   "Gap": "+ 00h 16' 57''",
+   "P": "-",
+   "rank": 18,
+   "name": "COFIDIS",
+   "team": "COFIDIS",
+   "bib": ""
+  },
+  {
+   "Rank": "19",
+   "Team": "CAJA RURAL-SEGUROS RGA",
+   "Times": "11h 21' 11''",
+   "Gap": "+ 00h 16' 57''",
+   "P": "-",
+   "rank": 19,
+   "name": "CAJA RURAL-SEGUROS RGA",
+   "team": "CAJA RURAL-SEGUROS RGA",
+   "bib": ""
+  },
+  {
+   "Rank": "20",
+   "Team": "TEAM PICNIC POSTNL",
+   "Times": "11h 21' 56''",
+   "Gap": "+ 00h 17' 42''",
+   "P": "-",
+   "rank": 20,
+   "name": "TEAM PICNIC POSTNL",
+   "team": "TEAM PICNIC POSTNL",
+   "bib": ""
+  },
+  {
+   "Rank": "21",
+   "Team": "UAE TEAM EMIRATES XRG",
+   "Times": "11h 22' 01''",
+   "Gap": "+ 00h 17' 47''",
+   "P": "-",
+   "rank": 21,
+   "name": "UAE TEAM EMIRATES XRG",
+   "team": "UAE TEAM EMIRATES XRG",
+   "bib": ""
+  },
+  {
+   "Rank": "22",
+   "Team": "SOUDAL QUICK-STEP",
+   "Times": "11h 23' 03''",
+   "Gap": "+ 00h 18' 49''",
+   "P": "-",
+   "rank": 22,
+   "name": "SOUDAL QUICK-STEP",
+   "team": "SOUDAL QUICK-STEP",
+   "bib": ""
+  },
+  {
+   "Rank": "23",
+   "Team": "UNO-X MOBILITY",
+   "Times": "11h 29' 57''",
+   "Gap": "+ 00h 25' 43''",
+   "P": "-",
+   "rank": 23,
+   "name": "UNO-X MOBILITY",
+   "team": "UNO-X MOBILITY",
+   "bib": ""
+  }
+ ]
+}
