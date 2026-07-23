@@ -1,0 +1,81 @@
+{
+ "stage": 18,
+ "code": "ime",
+ "scraped_at": "2026-07-23T17:56:33.252521+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/18/ime/d2fa53421af6d8309bef21077d031137/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "V. PARET PEINTRE",
+   "Rider No.": "93",
+   "Team": "SOUDAL QUICK-STEP",
+   "Points": "10 PTS",
+   "rank": 1,
+   "name": "V. PARET PEINTRE",
+   "team": "SOUDAL QUICK-STEP",
+   "bib": "93"
+  },
+  {
+   "Rank": "2",
+   "Rider": "R. CARAPAZ",
+   "Rider No.": "41",
+   "Team": "EF EDUCATION - EASYPOST",
+   "Points": "8 PTS",
+   "rank": 2,
+   "name": "R. CARAPAZ",
+   "team": "EF EDUCATION - EASYPOST",
+   "bib": "41"
+  },
+  {
+   "Rank": "3",
+   "Rider": "B. HEALY",
+   "Rider No.": "44",
+   "Team": "EF EDUCATION - EASYPOST",
+   "Points": "6 PTS",
+   "rank": 3,
+   "name": "B. HEALY",
+   "team": "EF EDUCATION - EASYPOST",
+   "bib": "44"
+  },
+  {
+   "Rank": "4",
+   "Rider": "M. SCHMID",
+   "Rider No.": "118",
+   "Team": "TEAM JAYCO ALULA",
+   "Points": "4 PTS",
+   "rank": 4,
+   "name": "M. SCHMID",
+   "team": "TEAM JAYCO ALULA",
+   "bib": "118"
+  },
+  {
+   "Rank": "5",
+   "Rider": "M. PEDERSEN",
+   "Rider No.": "33",
+   "Team": "LIDL-TREK",
+   "Points": "2 PTS",
+   "rank": 5,
+   "name": "M. PEDERSEN",
+   "team": "LIDL-TREK",
+   "bib": "33"
+  },
+  {
+   "Rank": "6",
+   "Rider": "S. QUINN",
+   "Rider No.": "45",
+   "Team": "EF EDUCATION - EASYPOST",
+   "Points": "1 PT",
+   "rank": 6,
+   "name": "S. QUINN",
+   "team": "EF EDUCATION - EASYPOST",
+   "bib": "45"
+  }
+ ]
+}

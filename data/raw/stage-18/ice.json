@@ -1,0 +1,24 @@
+{
+ "stage": 18,
+ "code": "ice",
+ "scraped_at": "2026-07-23T17:56:33.098560+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/18/ice/37719f6052129b6aa30b9fb1d9d34780/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "R. CARAPAZ",
+   "Rider No.": "41",
+   "Team": "EF EDUCATION - EASYPOST",
+   "rank": 1,
+   "name": "R. CARAPAZ",
+   "team": "EF EDUCATION - EASYPOST",
+   "bib": "41"
+  }
+ ]
+}
