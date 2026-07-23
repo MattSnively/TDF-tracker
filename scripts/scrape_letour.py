@@ -7,7 +7,9 @@ How the letour.fr rankings pages work (discovered July 2026):
     Stage codes: ite (stage result / times), ipe (points), ime (mountains),
     ije (youth), ete (team), ice (combativity), iqe (combined).
   - /en/rankings           -> general classifications AFTER THE LATEST COMPLETED
-    stage, same AJAX mechanism with codes itg, ipg, img, ijg, etg, icg, iqg.
+    stage, codes itg, ipg, img, ijg, etg, icg, iqg. These links are NOT exposed
+    as data-tabs-ajax attributes (those cover only the visible stage tab); they
+    live in a JSON tab-config blob and are served from the /none endpoint.
 
 Because the general page only ever shows the latest standings, this scraper is
 meant to run once per day right after each stage: the general snapshot it saves
@@ -25,6 +27,7 @@ Usage:
 
 import argparse
 import datetime
+import html
 import json
 import re
 import sys
@@ -49,6 +52,12 @@ HEADERS = {
 
 AJAX_URL_RE = re.compile(r"/en/ajax/ranking/(\d+)/([a-z]{3})/[a-f0-9]{32}/subtab")
 
+# General-classification (g-suffix) links live in a JSON tab-config blob rather
+# than as data-tabs-ajax attributes, and are served from the /none endpoint. The
+# attributes only ever expose the currently-visible stage tab, so the general
+# snapshot has to be read from this blob. Slashes arrive JSON-escaped (\/).
+GENERAL_URL_RE = re.compile(r"/en/ajax/ranking/(\d+)/([a-z]{2}g)/[a-f0-9]{32}/none")
+
 
 def fetch(url: str) -> str:
     """GET a letour.fr URL and return the HTML body (raises on HTTP errors)."""
@@ -66,6 +75,12 @@ def extract_ajax_urls(page_html: str) -> dict[str, str]:
         if m:
             urls[m.group(2)] = BASE + path
     return urls
+
+
+def extract_general_urls(page_html: str) -> dict[str, str]:
+    """Map general-classification code -> AJAX URL from the page's JSON tab config."""
+    text = html.unescape(page_html).replace("\\/", "/")
+    return {m.group(2): BASE + m.group(0) for m in GENERAL_URL_RE.finditer(text)}
 
 
 def clean_cell(cell) -> str:
@@ -103,14 +118,8 @@ def parse_ranking_table(html: str) -> tuple[list[str], list[dict]]:
     return header_cells, rows
 
 
-def scrape_page(page_url: str, stage: int, out_dir: Path) -> list[str]:
-    """Scrape one rankings page (stage or general) into out_dir; return codes saved."""
-    page_html = fetch(page_url)
-    ajax_urls = extract_ajax_urls(page_html)
-    if not ajax_urls:
-        print(f"  WARNING: no classification tabs found at {page_url}")
-        return []
-
+def save_rankings(ajax_urls: dict[str, str], stage: int, out_dir: Path) -> list[str]:
+    """Fetch each classification AJAX url and write out_dir/{code}.json; return codes saved."""
     saved = []
     for code, url in sorted(ajax_urls.items()):
         headers, rows = parse_ranking_table(fetch(url))
@@ -134,6 +143,15 @@ def scrape_page(page_url: str, stage: int, out_dir: Path) -> list[str]:
     return saved
 
 
+def scrape_stage_page(page_url: str, stage: int, out_dir: Path) -> list[str]:
+    """Scrape the stage-result tabs from a rankings page into out_dir; return codes saved."""
+    ajax_urls = extract_ajax_urls(fetch(page_url))
+    if not ajax_urls:
+        print(f"  WARNING: no classification tabs found at {page_url}")
+        return []
+    return save_rankings(ajax_urls, stage, out_dir)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stage", type=int, required=True, help="stage number 1-21")
@@ -149,28 +167,34 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"Stage {args.stage} classifications:")
-    stage_codes = scrape_page(f"{BASE}/en/rankings/stage-{args.stage}", args.stage, out_dir)
+    stage_codes = scrape_stage_page(
+        f"{BASE}/en/rankings/stage-{args.stage}", args.stage, out_dir
+    )
 
     if not args.no_general:
         # The base rankings page reflects standings after the latest completed
         # stage. Verify it matches the stage we're scraping before saving.
         print("General classification snapshot:")
-        page_html = fetch(f"{BASE}/en/rankings")
-        ajax_urls = extract_ajax_urls(page_html)
+        general_urls = extract_general_urls(fetch(f"{BASE}/en/rankings"))
         general_stage = None
-        for url in ajax_urls.values():
-            m = AJAX_URL_RE.search(url)
+        for url in general_urls.values():
+            m = GENERAL_URL_RE.search(url)
             if m:
                 general_stage = int(m.group(1))
                 break
-        if general_stage != args.stage:
+        if not general_urls:
+            print(
+                "  WARNING: no general-classification links found — "
+                "page structure may have changed."
+            )
+        elif general_stage != args.stage:
             print(
                 f"  WARNING: general page is showing stage {general_stage}, "
                 f"not {args.stage} — skipping snapshot (rerun without a stage "
                 f"mismatch, or use --no-general)."
             )
         else:
-            scrape_page(f"{BASE}/en/rankings", args.stage, out_dir)
+            save_rankings(general_urls, args.stage, out_dir)
 
     if not stage_codes:
         sys.exit("No stage tables scraped — page structure may have changed.")
