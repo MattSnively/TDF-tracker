@@ -76,6 +76,9 @@ export function LeagueTab() {
   const focusTotal = focusStage != null ? stageTotal(focusStage) : 0;
   const prevStage = stages[stages.indexOf(focusStage) - 1];
   const prevDelta = prevStage != null ? focusTotal - stageTotal(prevStage) : null;
+  // Everything the league has scored up to and including the focused stage.
+  const stagesThrough = stages.filter((n) => n <= focusStage);
+  const cumulativeTotal = stagesThrough.reduce((sum, n) => sum + stageTotal(n), 0);
 
   const chartData = useMemo(() => {
     let running = {};
@@ -200,7 +203,7 @@ export function LeagueTab() {
         </table>
       </Card>
 
-      <div className="mt-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
         <StatTile
           label={`League total — stage ${focusStage ?? "—"}`}
           value={fmtN(focusTotal)}
@@ -210,6 +213,23 @@ export function LeagueTab() {
               `avg ${fmtN(Math.round(focusTotal / managers.length))} each`,
               prevDelta != null &&
                 `${prevDelta >= 0 ? "+" : "−"}${fmtN(Math.abs(prevDelta))} vs stage ${prevStage}`,
+            ]
+              .filter(Boolean)
+              .join(" · ")
+          }
+        />
+        <StatTile
+          label={`League total — through stage ${focusStage ?? "—"}`}
+          value={fmtN(cumulativeTotal)}
+          sub={
+            [
+              stagesThrough.length === 1
+                ? "stage 1 only"
+                : `stages 1–${focusStage} combined`,
+              `avg ${fmtN(Math.round(cumulativeTotal / managers.length))} each`,
+              cumulativeTotal
+                ? `stage ${focusStage} is ${Math.round((focusTotal / cumulativeTotal) * 100)}% of it`
+                : null,
             ]
               .filter(Boolean)
               .join(" · ")
