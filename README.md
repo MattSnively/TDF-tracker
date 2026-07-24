@@ -26,11 +26,13 @@ was a *team* time trial scored as 1/8 of the team's result).
 Tissot fantasy API (authenticated — Matt's ~30-day JWT)
    │  scripts/scrape_official.py
    ▼
-data/official/{stats-latest,journees,myteam,standings}.json + snapshots/
+data/official/{stats-latest,journees,myteam,standings,league}.json + snapshots/
         POST /private/stats          all riders, cumulative points by source
         GET  /private/journee/{n}    stage meta + my rank
         GET  /private/feuillematch/{stage}/{idjg}   my scorecard per stage
         GET  /private/classementgeneral/{league}    standings
+        GET  /private/feuillematch/{stage}/{idjg}   every league manager's
+                                     per-stage totals (league.json)
 
 letour.fr/en/rankings (public, server-rendered HTML) — the real-race layer
    │  scripts/scrape_letour.py   (stage results, GC, jerseys, time gaps)
@@ -44,7 +46,9 @@ data/raw/stage-NN/*.json
 `/private/stats` omits cost) by an accent/ligature-folded name key, and layers
 in the letour.fr race results. Per-stage points for all riders come from
 day-over-day deltas of the dated `snapshots/`; my own team has exact per-stage
-points from `feuillematch`.
+points from `feuillematch`. The same endpoint accepts any team id in the
+league, so `league.json` carries exact per-stage totals for every manager
+(condensed to totals — full sheets would add ~1 MB per daily commit).
 
 ### Authentication
 

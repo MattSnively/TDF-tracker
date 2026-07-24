@@ -10,7 +10,7 @@ import {
   INK_SURFACE,
 } from "../tokens.js";
 
-const TABS = ["Overview", "Stages", "Riders", "Teams", "Value", "My Team"];
+const TABS = ["Overview", "Stages", "Riders", "Teams", "Value", "My Team", "League"];
 
 export function Header({ tab, setTab, isDark, toggleDark, stagesDone }) {
   return (

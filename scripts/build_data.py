@@ -7,6 +7,7 @@ Sources:
   data/official/journees.json        stage names/types + Matt's rank per stage
   data/official/myteam.json          Matt's scorecard per stage (feuillematch)
   data/official/standings.json       league standings
+  data/official/league.json          every manager's per-stage point totals
   data/official/snapshots/*.json     dated stats -> per-stage point deltas
   data/riders.csv                    star cost + category (from the fantasy game
                                      rider list; official stats omits cost)
@@ -18,7 +19,7 @@ accent-folded INITIAL|SURNAME key (compute_points.name_key), the same matcher
 used across the project. Bib is carried through for the letour join.
 
 Output shape (see the README for the field-by-field contract):
-  meta, teams, riders[], stages[], myTeam
+  meta, teams, riders[], stages[], myTeam, league
 """
 
 import csv
@@ -255,11 +256,40 @@ def build_myteam(myteam: dict, standings: dict) -> dict:
     return {"stages": stages, "standings": sorted(standings_rows, key=lambda x: x["position"])}
 
 
+def build_league(league: list, standings: dict) -> dict:
+    """Every manager's per-stage score, joined to their standings row.
+
+    `total` stays the standings figure rather than the sum of the stage series:
+    the two reconcile exactly, so a mismatch would mean a partial scrape, and
+    the standings number is the one the game displays.
+    """
+    by_idjg = {p.get("idjg"): p for p in standings.get("joueurs", [])}
+    managers = []
+    stage_nums = set()
+    for m in league:
+        row = by_idjg.get(m.get("idjg"), {})
+        stages = {n: sheet["total"] for n, sheet in m.get("stages", {}).items()}
+        stage_nums.update(int(n) for n in stages)
+        managers.append(
+            {
+                "manager": m.get("manager"),
+                "team": m.get("team"),
+                "me": bool(m.get("me")),
+                "position": to_int(row.get("position")),
+                "total": float(row.get("totaljoueur") or 0),
+                "stages": stages,
+            }
+        )
+    managers.sort(key=lambda x: x["position"] or 999)
+    return {"managers": managers, "stages": sorted(stage_nums)}
+
+
 def main() -> None:
     stats = load_json(OFFICIAL / "stats-latest.json", {"joueurs": [], "positions": []})
     journees = load_json(OFFICIAL / "journees.json", [])
     myteam = load_json(OFFICIAL / "myteam.json", {})
     standings = load_json(OFFICIAL / "standings.json", {"joueurs": []})
+    league_raw = load_json(OFFICIAL / "league.json", [])
     roster = list(csv.DictReader(open(ROSTER_CSV, encoding="utf-8")))
     roster_idx = RosterIndex(roster)
 
@@ -272,6 +302,7 @@ def main() -> None:
     roster_by_bib = {r["bib"]: r for r in riders}
     stages = build_stages(journees, roster_by_bib)
     my = build_myteam(myteam, standings)
+    league = build_league(league_raw, standings)
 
     completed = [s["n"] for s in stages]
     out = {
@@ -290,6 +321,7 @@ def main() -> None:
         "riders": riders,
         "stages": stages,
         "myTeam": my,
+        "league": league,
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")

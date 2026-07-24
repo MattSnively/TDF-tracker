@@ -25,6 +25,9 @@ What it captures (under data/official/):
         Tissot Bonus Question points.
   standings.json
         GET /private/classementgeneral/{league} — league standings.
+  league.json
+        GET /private/feuillematch/{stage}/{idjg} for every manager in the
+        league — condensed to per-stage point totals per manager.
 
 Usage: python scripts/scrape_official.py
 """
@@ -127,6 +130,59 @@ def fetch_standings(s: requests.Session, league_id: str) -> dict:
     return r.json() if r.status_code == 200 else {}
 
 
+def to_int(v) -> int:
+    try:
+        return int(float(v))
+    except (TypeError, ValueError):
+        return 0
+
+
+def sheet_totals(sheet: dict) -> dict:
+    """Condense one scorecard to its point totals (same parse as build_data)."""
+    feuille = sheet.get("feuille", {})
+    riders_total = sum(to_int(p.get("points")) for p in feuille.get("postes", []))
+    bonus = 0
+    for q in feuille.get("questions_additionnelles", []):
+        pts = q.get("points")
+        if isinstance(pts, dict):
+            bonus += to_int(pts.get("gagnes"))
+    return {
+        "ridersTotal": riders_total,
+        "bonusQuestion": bonus,
+        "total": riders_total + bonus,
+    }
+
+
+def fetch_league(s: requests.Session, standings: dict, completed_stages: list[int]) -> list[dict]:
+    """Per-stage scores for every manager in the league.
+
+    The scorecard endpoint accepts any team id in the league, not just Matt's,
+    so the whole league can be backfilled from stage 1. Only the totals are
+    kept — full sheets run ~8 KB each, which at 6 managers x 21 stages would
+    add ~1 MB to every daily data commit.
+    """
+    league = []
+    for p in standings.get("joueurs", []):
+        idjg = p.get("idjg")
+        if not idjg:
+            continue
+        stages = {}
+        for n in completed_stages:
+            r = s.get(f"{API}/private/feuillematch/{n}/{idjg}?lg=en", timeout=20)
+            if r.status_code == 200:
+                stages[str(n)] = sheet_totals(r.json())
+        league.append(
+            {
+                "idjg": idjg,
+                "manager": p.get("manager"),
+                "team": p.get("equipe"),
+                "me": bool(p.get("moi")),
+                "stages": stages,
+            }
+        )
+    return league
+
+
 def main() -> None:
     tok = load_token()
     claims = jwt_claims(tok)
@@ -181,6 +237,13 @@ def main() -> None:
         )
         n_players = len(standings.get("joueurs", []))
         print(f"standings: {n_players} players in league {league_id}")
+
+        # 5) Every manager's per-stage scores (powers the League tab).
+        league = fetch_league(s, standings, completed)
+        (OUT_DIR / "league.json").write_text(
+            json.dumps(league, ensure_ascii=False), encoding="utf-8"
+        )
+        print(f"league: {len(league)} managers x {len(completed)} stages -> league.json")
 
 
 if __name__ == "__main__":

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import { Header } from "./components/Header.jsx";
 import { loadData, stagesComplete } from "./data.js";
+import { LeagueTab } from "./tabs/LeagueTab.jsx";
 import { MyTeamTab } from "./tabs/MyTeamTab.jsx";
 import { OverviewTab } from "./tabs/OverviewTab.jsx";
 import { RidersTab } from "./tabs/RidersTab.jsx";
@@ -36,6 +37,7 @@ function Shell({ isDark, toggleDark }) {
         {tab === "Teams" && <TeamsTab />}
         {tab === "Value" && <ValueTab />}
         {tab === "My Team" && <MyTeamTab />}
+        {tab === "League" && <LeagueTab />}
       </main>
     </div>
   );

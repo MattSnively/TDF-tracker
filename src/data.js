@@ -18,6 +18,7 @@ export const getTeams = () => DATA?.teams ?? [];
 export const getRiders = () => DATA?.riders ?? [];
 export const getStages = () => DATA?.stages ?? [];
 export const getMyTeam = () => DATA?.myTeam ?? { stages: {}, standings: [] };
+export const getLeague = () => DATA?.league ?? { managers: [], stages: [] };
 
 export const stagesComplete = () => getMeta().stagesComplete ?? [];
 export const isPreRace = () => stagesComplete().length === 0;
