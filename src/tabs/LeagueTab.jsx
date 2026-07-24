@@ -1,7 +1,8 @@
 /* League tab: how the six managers in Matt's Tissot league stack up — current
    standings, and each manager's score stage by stage (toggleable to the
-   cumulative race for the lead). Numbers are the official game scores; the
-   per-stage series sums exactly to the standings total. */
+   cumulative race for the lead). Clicking a stage on the chart re-ranks the
+   standings table on that stage alone. Numbers are the official game scores;
+   the per-stage series sums exactly to the standings total. */
 
 import { useMemo, useState } from "react";
 
@@ -10,6 +11,7 @@ import {
   Legend,
   Line,
   LineChart,
+  ReferenceLine,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -32,15 +34,38 @@ const VIEWS = [
   { key: "cumulative", label: "Cumulative" },
 ];
 
-/** Series colour is pinned to standings position so it never shifts between
-    the table, the legend and the lines. */
-const colorFor = (i) => SERIES_COLORS[i % SERIES_COLORS.length];
-
 export function LeagueTab() {
   const league = getLeague();
   const [view, setView] = useState("stage");
+  // null = overall standings; a stage number = that stage broken out.
+  const [selectedStage, setSelectedStage] = useState(null);
   const managers = league.managers ?? [];
   const stages = league.stages ?? [];
+
+  /* Colour is keyed to the manager, not the row, so identity holds when the
+     table re-sorts into a single stage's order. Assigned by overall position. */
+  const colorByManager = useMemo(
+    () =>
+      Object.fromEntries(
+        managers.map((m, i) => [m.manager, SERIES_COLORS[i % SERIES_COLORS.length]]),
+      ),
+    [managers],
+  );
+
+  /* One shape for both table modes: overall standings, or a single stage
+     re-ranked on that stage's points. */
+  const rows = useMemo(() => {
+    const base = managers.map((m) => ({
+      manager: m.manager,
+      team: m.team,
+      me: m.me,
+      color: colorByManager[m.manager],
+      points: selectedStage == null ? m.total : (m.stages[String(selectedStage)] ?? 0),
+      overallPosition: m.position,
+    }));
+    if (selectedStage != null) base.sort((a, b) => b.points - a.points);
+    return base.map((r, i) => ({ ...r, rank: selectedStage == null ? r.overallPosition : i + 1 }));
+  }, [managers, colorByManager, selectedStage]);
 
   const chartData = useMemo(() => {
     let running = {};
@@ -94,7 +119,21 @@ export function LeagueTab() {
         />
       </div>
 
-      <SectionTitle>Current standings</SectionTitle>
+      <SectionTitle
+        right={
+          selectedStage != null && (
+            <button
+              onClick={() => setSelectedStage(null)}
+              className="px-2 py-1 text-[11px] font-medium rounded border"
+              style={{ color: GRAY_500, borderColor: GRAY_200 }}
+            >
+              ← Back to overall
+            </button>
+          )
+        }
+      >
+        {selectedStage == null ? "Current standings" : `Stage ${selectedStage} points`}
+      </SectionTitle>
       <Card className="p-0 overflow-x-auto">
         <table className="w-full text-[12px]">
           <thead>
@@ -102,42 +141,48 @@ export function LeagueTab() {
               <th className="px-4 py-2 font-medium w-8">#</th>
               <th className="px-2 py-2 font-medium">Manager</th>
               <th className="px-2 py-2 font-medium hidden sm:table-cell">Points</th>
-              <th className="px-4 py-2 font-medium text-right">Total</th>
+              <th className="px-4 py-2 font-medium text-right">
+                {selectedStage == null ? "Total" : "Stage"}
+              </th>
               <th className="px-4 py-2 font-medium text-right whitespace-nowrap">Gap</th>
             </tr>
           </thead>
           <tbody>
-            {managers.map((m, i) => (
+            {rows.map((r, i) => (
               <tr
-                key={m.manager}
+                key={r.manager}
                 className="border-t"
-                style={{ borderColor: GRAY_200, color: INK, background: m.me ? ACCENT_SOFT : undefined }}
+                style={{ borderColor: GRAY_200, color: INK, background: r.me ? ACCENT_SOFT : undefined }}
               >
-                <td className="px-4 py-1.5 tabular-nums" style={{ color: GRAY_500 }}>{m.position}</td>
+                <td className="px-4 py-1.5 tabular-nums" style={{ color: GRAY_500 }}>{r.rank}</td>
                 <td className="px-2 py-1.5 font-medium whitespace-nowrap">
                   <span
                     className="inline-block w-2 h-2 rounded-full mr-2 align-middle"
-                    style={{ background: colorFor(i) }}
+                    style={{ background: r.color }}
                     aria-hidden="true"
                   />
-                  {m.manager}
-                  {m.team && m.team !== m.manager && (
-                    <span className="ml-2 text-[11px]" style={{ color: GRAY_500 }}>{m.team}</span>
+                  {r.manager}
+                  {r.team && r.team !== r.manager && (
+                    <span className="ml-2 text-[11px]" style={{ color: GRAY_500 }}>{r.team}</span>
                   )}
                 </td>
                 {/* Ranked bar in-row: keeps the leaderboard order readable while
-                    the exact figures stay in the adjacent columns. */}
+                    the exact figures stay in the adjacent columns. Scaled to the
+                    top score in whichever view is showing. */}
                 <td className="px-2 py-1.5 hidden sm:table-cell w-[45%]">
                   <div className="h-2 rounded-sm" style={{ background: "var(--gray-100)" }}>
                     <div
                       className="h-2 rounded-sm"
-                      style={{ width: `${(m.total / leader.total) * 100}%`, background: colorFor(i) }}
+                      style={{
+                        width: `${rows[0].points ? (r.points / rows[0].points) * 100 : 0}%`,
+                        background: r.color,
+                      }}
                     />
                   </div>
                 </td>
-                <td className="px-4 py-1.5 text-right tabular-nums font-semibold">{fmtN(m.total)}</td>
+                <td className="px-4 py-1.5 text-right tabular-nums font-semibold">{fmtN(r.points)}</td>
                 <td className="px-4 py-1.5 text-right tabular-nums" style={{ color: GRAY_500 }}>
-                  {i === 0 ? "—" : `−${fmtN(leader.total - m.total)}`}
+                  {i === 0 ? "—" : `−${fmtN(rows[0].points - r.points)}`}
                 </td>
               </tr>
             ))}
@@ -170,8 +215,25 @@ export function LeagueTab() {
       </SectionTitle>
       <Card>
         <ResponsiveContainer width="100%" height={340}>
-          <LineChart data={chartData} margin={{ top: 8, right: 12, bottom: 4, left: 0 }}>
+          <LineChart
+            data={chartData}
+            margin={{ top: 8, right: 12, bottom: 4, left: 0 }}
+            onClick={(e) => {
+              const n = Number(e?.activeLabel);
+              // Clicking the selected stage again clears the breakout.
+              if (Number.isFinite(n)) setSelectedStage((cur) => (cur === n ? null : n));
+            }}
+            style={{ cursor: "pointer" }}
+          >
             <CartesianGrid stroke="var(--gray-200)" vertical={false} />
+            {selectedStage != null && (
+              <ReferenceLine
+                x={selectedStage}
+                stroke="var(--ink)"
+                strokeDasharray="3 3"
+                label={{ value: `S${selectedStage}`, position: "top", fontSize: 11, fill: "var(--ink)" }}
+              />
+            )}
             <XAxis
               dataKey="stage"
               tick={{ fontSize: 11, fill: "var(--gray-500)" }}
@@ -202,7 +264,7 @@ export function LeagueTab() {
                 key={m.manager}
                 type="linear"
                 dataKey={m.manager}
-                stroke={colorFor(i)}
+                stroke={colorByManager[m.manager]}
                 strokeWidth={m.me ? 3 : 1.75}
                 dot={false}
                 activeDot={{ r: 4 }}
@@ -215,7 +277,7 @@ export function LeagueTab() {
           {view === "cumulative"
             ? "Running total after each stage — the gap between lines is the gap in the standings."
             : "Each stage scored on its own. Spikes are mountain and bonus-question days."}{" "}
-          Your line is drawn heavier.
+          Your line is drawn heavier. Click a stage to break it out in the table above.
         </div>
       </Card>
     </div>
