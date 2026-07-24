@@ -67,6 +67,16 @@ export function LeagueTab() {
     return base.map((r, i) => ({ ...r, rank: selectedStage == null ? r.overallPosition : i + 1 }));
   }, [managers, colorByManager, selectedStage]);
 
+  /* Whole-league output for one stage — how big a scoring day it was overall,
+     independent of who won it. Follows the stage picked on the chart, and
+     falls back to the most recent stage. */
+  const stageTotal = (n) =>
+    managers.reduce((sum, m) => sum + (m.stages[String(n)] ?? 0), 0);
+  const focusStage = selectedStage ?? stages[stages.length - 1];
+  const focusTotal = focusStage != null ? stageTotal(focusStage) : 0;
+  const prevStage = stages[stages.indexOf(focusStage) - 1];
+  const prevDelta = prevStage != null ? focusTotal - stageTotal(prevStage) : null;
+
   const chartData = useMemo(() => {
     let running = {};
     return stages.map((n) => {
@@ -189,6 +199,23 @@ export function LeagueTab() {
           </tbody>
         </table>
       </Card>
+
+      <div className="mt-3">
+        <StatTile
+          label={`League total — stage ${focusStage ?? "—"}`}
+          value={fmtN(focusTotal)}
+          sub={
+            [
+              `all ${managers.length} managers combined`,
+              `avg ${fmtN(Math.round(focusTotal / managers.length))} each`,
+              prevDelta != null &&
+                `${prevDelta >= 0 ? "+" : "−"}${fmtN(Math.abs(prevDelta))} vs stage ${prevStage}`,
+            ]
+              .filter(Boolean)
+              .join(" · ")
+          }
+        />
+      </div>
 
       <SectionTitle
         right={
