@@ -1,0 +1,24 @@
+{
+ "stage": 20,
+ "code": "ice",
+ "scraped_at": "2026-07-25T17:34:01.551324+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/20/ice/152fa82b8e11edf03c22132f34bb44d4/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "S. KUSS",
+   "Rider No.": "17",
+   "Team": "TEAM VISMA | LEASE A BIKE",
+   "rank": 1,
+   "name": "S. KUSS",
+   "team": "TEAM VISMA | LEASE A BIKE",
+   "bib": "17"
+  }
+ ]
+}

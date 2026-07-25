@@ -1,0 +1,22 @@
+{
+ "stage": 20,
+ "code": "iqe",
+ "scraped_at": "2026-07-25T17:34:02.319319+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/20/iqe/fe0613177008d29dc7d4f91006a01e90/subtab",
+ "headers": [
+  "Rider",
+  "Rider No.",
+  "Team"
+ ],
+ "rows": [
+  {
+   "Rider": "M. VAN DER POEL",
+   "Rider No.": "101",
+   "Team": "ALPECIN-PREMIER TECH",
+   "rank": null,
+   "name": "M. VAN DER POEL",
+   "team": "ALPECIN-PREMIER TECH",
+   "bib": "101"
+  }
+ ]
+}

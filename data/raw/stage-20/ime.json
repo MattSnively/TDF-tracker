@@ -1,0 +1,103 @@
+{
+ "stage": 20,
+ "code": "ime",
+ "scraped_at": "2026-07-25T17:34:01.945662+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/20/ime/16bbcd017da1373d6bc200c3419e67aa/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "R. CARAPAZ",
+   "Rider No.": "41",
+   "Team": "EF EDUCATION - EASYPOST",
+   "Points": "20 PTS",
+   "rank": 1,
+   "name": "R. CARAPAZ",
+   "team": "EF EDUCATION - EASYPOST",
+   "bib": "41"
+  },
+  {
+   "Rank": "2",
+   "Rider": "V. PARET PEINTRE",
+   "Rider No.": "93",
+   "Team": "SOUDAL QUICK-STEP",
+   "Points": "15 PTS",
+   "rank": 2,
+   "name": "V. PARET PEINTRE",
+   "team": "SOUDAL QUICK-STEP",
+   "bib": "93"
+  },
+  {
+   "Rank": "3",
+   "Rider": "D. PIGANZOLI",
+   "Rider No.": "18",
+   "Team": "TEAM VISMA | LEASE A BIKE",
+   "Points": "12 PTS",
+   "rank": 3,
+   "name": "D. PIGANZOLI",
+   "team": "TEAM VISMA | LEASE A BIKE",
+   "bib": "18"
+  },
+  {
+   "Rank": "4",
+   "Rider": "J. AYUSO",
+   "Rider No.": "31",
+   "Team": "LIDL-TREK",
+   "Points": "10 PTS",
+   "rank": 4,
+   "name": "J. AYUSO",
+   "team": "LIDL-TREK",
+   "bib": "31"
+  },
+  {
+   "Rank": "5",
+   "Rider": "M. RICCITELLO",
+   "Rider No.": "58",
+   "Team": "DECATHLON CMA CGM TEAM",
+   "Points": "8 PTS",
+   "rank": 5,
+   "name": "M. RICCITELLO",
+   "team": "DECATHLON CMA CGM TEAM",
+   "bib": "58"
+  },
+  {
+   "Rank": "6",
+   "Rider": "S. KUSS",
+   "Rider No.": "17",
+   "Team": "TEAM VISMA | LEASE A BIKE",
+   "Points": "6 PTS",
+   "rank": 6,
+   "name": "S. KUSS",
+   "team": "TEAM VISMA | LEASE A BIKE",
+   "bib": "17"
+  },
+  {
+   "Rank": "7",
+   "Rider": "T. ARENSMAN",
+   "Rider No.": "82",
+   "Team": "NETCOMPANY INEOS CYCLING TEAM",
+   "Points": "4 PTS",
+   "rank": 7,
+   "name": "T. ARENSMAN",
+   "team": "NETCOMPANY INEOS CYCLING TEAM",
+   "bib": "82"
+  },
+  {
+   "Rank": "8",
+   "Rider": "T. FOSS",
+   "Rider No.": "83",
+   "Team": "NETCOMPANY INEOS CYCLING TEAM",
+   "Points": "2 PTS",
+   "rank": 8,
+   "name": "T. FOSS",
+   "team": "NETCOMPANY INEOS CYCLING TEAM",
+   "bib": "83"
+  }
+ ]
+}
