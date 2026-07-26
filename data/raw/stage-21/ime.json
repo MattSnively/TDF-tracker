@@ -1,0 +1,26 @@
+{
+ "stage": 21,
+ "code": "ime",
+ "scraped_at": "2026-07-26T17:35:52.283791+00:00",
+ "source_url": "https://www.letour.fr/en/ajax/ranking/21/ime/adb95d8567094fbbc3d925a494122b7d/subtab",
+ "headers": [
+  "Rank",
+  "Rider",
+  "Rider No.",
+  "Team",
+  "Points"
+ ],
+ "rows": [
+  {
+   "Rank": "1",
+   "Rider": "M. PEDERSEN",
+   "Rider No.": "33",
+   "Team": "LIDL-TREK",
+   "Points": "1 PT",
+   "rank": 1,
+   "name": "M. PEDERSEN",
+   "team": "LIDL-TREK",
+   "bib": "33"
+  }
+ ]
+}
